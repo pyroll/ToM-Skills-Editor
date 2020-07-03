@@ -1,0 +1,13 @@
+__pycache__
+_old
+_pside2_tuts
+.vscode
+build/**
+Game_Files/SkillDataEdit/
+ToM_Skills_Edit_P
+venv
+improvements.txt
+myPS.env
+old code.txt
+references.txt
+ToM_Skills_Editor.spec
