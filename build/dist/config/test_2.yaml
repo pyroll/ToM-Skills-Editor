@@ -1,0 +1,18 @@
+Duran:
+  AttackUp:
+  - 'Class_1A: 67'
+Hawkeye:
+  AttackUp4:
+  - 'Link Status: True'
+  Onmitsu2:
+  - 'Class_1A: 0'
+  - 'Class_4A: -1'
+  - 'Class_4B: -1'
+  - 'Class_4C: -1'
+  - 'Class_4D: -1'
+Kevin:
+  DefUp3:
+  - 'Class_1A: 7'
+Riesz:
+  AttackUp:
+  - 'Link Status: True'

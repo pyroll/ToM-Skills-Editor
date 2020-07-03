@@ -1,0 +1,4077 @@
+[
+  {
+    "Key": "SKILL_LUK_000",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_000",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_003",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_skill_name014",
+      "SkillText": "msg_bat_skill_cap014",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_001_Hunbaru",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_005",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_007",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.15
+      ],
+      "SkillName": "msg_bat_ability_name172",
+      "SkillText": "msg_bat_ability_cap172",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_002_LuckUp",
+    "Value": {
+      "Situation": 0,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        []
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name006",
+      "SkillText": "msg_bat_ability_cap006",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_Luck",
+      "PassiveContentVal": 5
+    }
+  },
+  {
+    "Key": "SKILL_LUK_003_ItemHealUp",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_003",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_009",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_016",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                50,
+                50
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name250",
+      "SkillText": "msg_bat_ability_cap250",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_004_Chouhatu",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_017",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                70
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name008",
+      "SkillText": "msg_bat_ability_cap008",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_005_Hide",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_018",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                50
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name100",
+      "SkillText": "msg_bat_ability_cap100",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_006_AlimentOff",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_014",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_019",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                5,
+                7,
+                10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name174",
+      "SkillText": "msg_bat_ability_cap174",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_007_LuckRegist",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_020",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.5
+      ],
+      "SkillName": "msg_bat_ability_name010",
+      "SkillText": "msg_bat_ability_cap010",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_008_Mikiri",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_021",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.05
+      ],
+      "SkillName": "msg_bat_ability_name011",
+      "SkillText": "msg_bat_ability_cap011",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_009_Survive",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_007",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.2
+      ],
+      "SkillName": "msg_bat_ability_name016",
+      "SkillText": "msg_bat_ability_cap016",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_010_Kiseki",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_000",
+        "StatusValue": [
+          50
+        ],
+        "IsPercent": true,
+        "IsGreater": true,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_007",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name038",
+      "SkillText": "msg_bat_ability_cap038",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_011_Kiseki2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_000",
+        "StatusValue": [
+          30
+        ],
+        "IsPercent": true,
+        "IsGreater": true,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_007",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name060",
+      "SkillText": "msg_bat_ability_cap060",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_012_CureHeal",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_003",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_008",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.75
+      ],
+      "SkillName": "msg_bat_ability_name039",
+      "SkillText": "msg_bat_ability_cap039",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_013_CureHeal2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_003",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_008",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        1.0
+      ],
+      "SkillName": "msg_bat_ability_name061",
+      "SkillText": "msg_bat_ability_cap061",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_014_CriticalUP",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_066",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name048",
+      "SkillText": "msg_bat_ability_cap048",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_015_CriticalUP2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_066",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                25
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name071",
+      "SkillText": "msg_bat_ability_cap071",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_016_Seiki",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_003",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_032",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_015",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                100
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.2
+      ],
+      "SkillName": "msg_bat_ability_name040",
+      "SkillText": "msg_bat_ability_cap040",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_017_ChinmokuTaiseiUP",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_014",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_067",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                10,
+                10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name078",
+      "SkillText": "msg_bat_ability_cap078",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_018_Blessing",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_001",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_035",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_043",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                -100
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.2
+      ],
+      "SkillName": "msg_bat_ability_name085",
+      "SkillText": "msg_bat_ability_cap085",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_019_RandomDown",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_013",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_091",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.1
+      ],
+      "SkillName": "msg_bat_ability_name090",
+      "SkillText": "msg_bat_ability_cap090",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_020_Onmitsu",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_055",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                50
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name100",
+      "SkillText": "msg_bat_ability_cap100",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_021_ZyotaiIzyoUpAll",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_069",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                30
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name108",
+      "SkillText": "msg_bat_ability_cap108",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_022_ZyotaiIzyoUpAll2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_069",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                50
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name123",
+      "SkillText": "msg_bat_ability_cap123",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_023_MagicArmor",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_034",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_021",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.15
+      ],
+      "SkillName": "msg_bat_ability_name112",
+      "SkillText": "msg_bat_ability_cap112",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_024_MagicArmor2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_034",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_021",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name126",
+      "SkillText": "msg_bat_ability_cap126",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_025_DamageHeal",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_029",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.1
+      ],
+      "SkillName": "msg_bat_ability_name134",
+      "SkillText": "msg_bat_ability_cap134",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_026_Toki",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_008",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [
+          5
+        ],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_006",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                4
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name139",
+      "SkillText": "msg_bat_ability_cap139",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_027_Revival",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_000",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_094",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_056",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                50
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.5
+      ],
+      "SkillName": "msg_bat_ability_name145",
+      "SkillText": "msg_bat_ability_cap145",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_028_Mikiri2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_021",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.2
+      ],
+      "SkillName": "msg_bat_ability_name168",
+      "SkillText": "msg_bat_ability_cap168",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_029",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_007",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.1
+      ],
+      "SkillName": "Hunbaru",
+      "SkillText": "Guts 10Per",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_030_ZyotaiIzyoTaiseiUP",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_014",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_034",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                50
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name174",
+      "SkillText": "msg_bat_ability_cap174",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_031_Kago",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_003",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_008",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_063",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        1.0
+      ],
+      "SkillName": "msg_bat_ability_name177",
+      "SkillText": "msg_bat_ability_cap177",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_032_LuckyStatusDown",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_027",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_047",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                7
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name195",
+      "SkillText": "msg_bat_ability_cap195",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_033_LuckyStatusUp",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_062",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_046",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                15
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name267",
+      "SkillText": "msg_bat_ability_cap267",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_034_Salvation",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_015",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_046",
+        "ConditionValue": [
+          0
+        ],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_070",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name197",
+      "SkillText": "msg_bat_ability_cap197",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_035_Hellheim",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_009",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name200",
+      "SkillText": "msg_bat_ability_cap200",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_036_DropUp",
+    "Value": {
+      "Situation": 3,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_072",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                5
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name206",
+      "SkillText": "msg_bat_ability_cap206",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_037_ItemMaster",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_013",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_035",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_073",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.1
+      ],
+      "SkillName": "msg_bat_ability_name207",
+      "SkillText": "msg_bat_ability_cap207",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_038_Snacher",
+    "Value": {
+      "Situation": 3,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_074",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                20
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name219",
+      "SkillText": "msg_bat_ability_cap219",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_039_Mikiri3",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_010",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_021",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.15
+      ],
+      "SkillName": "msg_bat_ability_name224",
+      "SkillText": "msg_bat_ability_cap224",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_040_Tenchu",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_013",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.1
+      ],
+      "SkillName": "msg_bat_ability_name234",
+      "SkillText": "msg_bat_ability_cap234",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_041_Tenchu2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_013",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_075",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.1
+      ],
+      "SkillName": "msg_bat_ability_name247",
+      "SkillText": "msg_bat_ability_cap247",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_042_KishiKaisei",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_000",
+        "StatusValue": [
+          10
+        ],
+        "IsPercent": true,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_013",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_075",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.05,
+        0.05
+      ],
+      "SkillName": "msg_bat_ability_name237",
+      "SkillText": "msg_bat_ability_cap237",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_043_ItemUp",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_003",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_092",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_015",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                20
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name250",
+      "SkillText": "msg_bat_ability_cap250",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_044_Einheral",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_042",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_006",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                1
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name251",
+      "SkillText": "msg_bat_ability_cap251",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_045_ZyotaiIzyoTaiseiUpHuyo",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_062",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_034",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                10,
+                10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name254",
+      "SkillText": "msg_bat_ability_cap254",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_046_ZyotaiIzyoTaiseiDownHuyo",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_039",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_077",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                -10,
+                -10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name257",
+      "SkillText": "msg_bat_ability_cap257",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_047_DoubleUp",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_040",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_078",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        1.0
+      ],
+      "SkillName": "msg_bat_ability_name262",
+      "SkillText": "msg_bat_ability_cap262",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_048_RandomUp",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_062",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        1.0
+      ],
+      "SkillName": "msg_bat_ability_name263",
+      "SkillText": "msg_bat_ability_cap263",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_049_DownConvert",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_041",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_080",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.2
+      ],
+      "SkillName": "msg_bat_ability_name268",
+      "SkillText": "msg_bat_ability_cap268",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_050_ReverseUp",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_063",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_097",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name273",
+      "SkillText": "msg_bat_ability_cap273",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_051_StatusDownTaisei",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_041",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.5
+      ],
+      "SkillName": "msg_bat_ability_name280",
+      "SkillText": "msg_bat_ability_cap280",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_052_KamitoriNoHisyo",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_000",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_047",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_083",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                35
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name286",
+      "SkillText": "msg_bat_ability_cap286",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_053_CriticalDamage",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_084",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                30
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name154",
+      "SkillText": "msg_bat_ability_cap154",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_054_CriticalDamage2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_084",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                40
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name169",
+      "SkillText": "msg_bat_ability_cap169",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_055_BadCounter",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_064",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_098",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.5
+      ],
+      "SkillName": "msg_bat_ability_name192",
+      "SkillText": "msg_bat_ability_cap192",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_056_huiUchi",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_055",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_032",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name217",
+      "SkillText": "msg_bat_ability_cap217",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_057_SummonParty",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_016",
+        "StatusValue": [
+          1
+        ],
+        "IsPercent": false,
+        "IsGreater": true,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_002",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_024",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_032",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                5
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name187",
+      "SkillText": "msg_bat_ability_cap187",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_058_LuckyItem",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_013",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_035",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_073",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.05
+      ],
+      "SkillName": "msg_bat_linkability_name005",
+      "SkillText": "msg_bat_linkability_cap005",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_059_Kyozi",
+    "Value": {
+      "Situation": 3,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_010",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_006",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                5
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name009",
+      "SkillText": "msg_bat_linkability_cap009",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_060_LuckUp2",
+    "Value": {
+      "Situation": 0,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        []
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name006",
+      "SkillText": "msg_bat_ability_cap006",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_Luck",
+      "PassiveContentVal": 5
+    }
+  },
+  {
+    "Key": "SKILL_LUK_061_DropUp2",
+    "Value": {
+      "Situation": 3,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_072",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name015",
+      "SkillText": "msg_bat_linkability_cap015",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_062_KyushiNiIssyou",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_041",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.5
+      ],
+      "SkillName": "msg_bat_linkability_name022",
+      "SkillText": "msg_bat_linkability_cap022",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_063_AiNoKiseki",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_001",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_035",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_043",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                -40
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name039",
+      "SkillText": "msg_bat_linkability_cap039",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_064_YuzyoNoKizuna",
+    "Value": {
+      "Situation": 3,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_014",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                50
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name045",
+      "SkillText": "msg_bat_linkability_cap045",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_065_ManaNoZyoryoku",
+    "Value": {
+      "Situation": 3,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                300
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name047",
+      "SkillText": "msg_bat_linkability_cap047",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_066_ManaNoKiseki",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_013",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_035",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_073",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        1.0
+      ],
+      "SkillName": "msg_bat_linkability_name053",
+      "SkillText": "msg_bat_linkability_cap053",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_067_Einheral_Link",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_037",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_006",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                1
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name031",
+      "SkillText": "msg_bat_linkability_cap031",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_068_ItemMaster_Link",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_013",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_035",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_073",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.1
+      ],
+      "SkillName": "msg_bat_linkability_name030",
+      "SkillText": "msg_bat_linkability_cap030",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_069_LuckUp3",
+    "Value": {
+      "Situation": 0,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        []
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name304",
+      "SkillText": "msg_bat_ability_cap006",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_Luck",
+      "PassiveContentVal": 10
+    }
+  },
+  {
+    "Key": "SKILL_LUK_070_LuckUp4",
+    "Value": {
+      "Situation": 0,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        []
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name304",
+      "SkillText": "msg_bat_ability_cap006",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_Luck",
+      "PassiveContentVal": 10
+    }
+  },
+  {
+    "Key": "SKILL_LUK_071_BadCounter2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_064",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_098",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.65
+      ],
+      "SkillName": "msg_bat_ability_name317",
+      "SkillText": "msg_bat_ability_cap317",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_072_RandomDown2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_013",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_091",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.2
+      ],
+      "SkillName": "msg_bat_ability_name323",
+      "SkillText": "msg_bat_ability_cap323",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_073_Shuuchuu",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_066",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                25
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name325",
+      "SkillText": "msg_bat_ability_cap325",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_074_Issen",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_084",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                30
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name326",
+      "SkillText": "msg_bat_ability_cap326",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_075_Onmitsu2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_055",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                100
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name150",
+      "SkillText": "msg_bat_ability_cap150",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_076_CriticalUP3",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_066",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                40
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name284",
+      "SkillText": "msg_bat_ability_cap071",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_077_LuckyStatusUp2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_062",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_046",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                20
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name288",
+      "SkillText": "msg_bat_ability_cap288",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_078_LuckyStatusDown2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_027",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_047",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                10
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name289",
+      "SkillText": "msg_bat_ability_cap289",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_079_DownConvert2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_041",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_080",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.25
+      ],
+      "SkillName": "msg_bat_ability_name194",
+      "SkillText": "msg_bat_ability_cap268",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_080_BadCounter3",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_005",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_064",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_098",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.8
+      ],
+      "SkillName": "msg_bat_ability_name342",
+      "SkillText": "msg_bat_ability_cap317",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_081_PowerBreak",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name318",
+      "SkillText": "msg_bat_ability_cap318",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_082_PowerBreak2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.6
+      ],
+      "SkillName": "msg_bat_ability_name319",
+      "SkillText": "msg_bat_ability_cap319",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_083_PowerBreak3",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.9
+      ],
+      "SkillName": "msg_bat_ability_name343",
+      "SkillText": "msg_bat_ability_cap319",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_084_ProtectBreak",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name320",
+      "SkillText": "msg_bat_ability_cap320",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_085_ProtectBreak2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.6
+      ],
+      "SkillName": "msg_bat_ability_name321",
+      "SkillText": "msg_bat_ability_cap321",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_086_ProtectBreak3",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.9
+      ],
+      "SkillName": "msg_bat_ability_name344",
+      "SkillText": "msg_bat_ability_cap321",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_087_MagicBreak",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name345",
+      "SkillText": "msg_bat_ability_cap345",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_088_MagicBreak2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.6
+      ],
+      "SkillName": "msg_bat_ability_name346",
+      "SkillText": "msg_bat_ability_cap345",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_089_MagicBreak3",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_083",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.9
+      ],
+      "SkillName": "msg_bat_ability_name347",
+      "SkillText": "msg_bat_ability_cap345",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_090_huiUchi2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_055",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_032",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                15
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name353",
+      "SkillText": "msg_bat_ability_cap217",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_091_Blessing2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_001",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_035",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_043",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                -100
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name355",
+      "SkillText": "msg_bat_ability_cap085",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_092_MagicArmor3",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_034",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_021",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.4
+      ],
+      "SkillName": "msg_bat_ability_name359",
+      "SkillText": "msg_bat_ability_cap126",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_093_RandomDown3",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_013",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_091",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [
+        0.3
+      ],
+      "SkillName": "msg_bat_ability_name360",
+      "SkillText": "msg_bat_ability_cap323",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_094_Shuuchuu2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_066",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                40
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name366",
+      "SkillText": "msg_bat_ability_cap325",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_095_Issen2",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_016",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_084",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                40
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name367",
+      "SkillText": "msg_bat_ability_cap326",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_096_CrisisHIt",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_011",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_044",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_066",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                70
+              ],
+              "IsPer": true,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_ability_name386",
+      "SkillText": "msg_bat_ability_cap386",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_097_SoulEat",
+    "Value": {
+      "Situation": 2,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_012",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_004",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID_079",
+            "ContentValue": {
+              "Setting_ContentVal": [],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name033",
+      "SkillText": "msg_bat_linkability_cap033",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_098_EncountUP",
+    "Value": {
+      "Situation": 3,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                -2
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name004",
+      "SkillText": "msg_bat_linkability_cap004",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  },
+  {
+    "Key": "SKILL_LUK_099_EncountDown",
+    "Value": {
+      "Situation": 3,
+      "StatusSetting": {
+        "StatusId": "ESkillStatusConditionType::SKILLSTATUSCONDITION_ID_NONE",
+        "StatusValue": [],
+        "IsPercent": false,
+        "IsGreater": false,
+        "UTTypes": "EnumProperty,ArrayProperty,BoolProperty,BoolProperty"
+      },
+      "TriggerSetting": {
+        "TriggerId": "ESkillTriggerType::SKILLTRIGGER_ID_NONE",
+        "ConditionId": "ESkillConditionType::SKILLCONDITION_ID_NONE",
+        "ConditionValue": [],
+        "UTTypes": "EnumProperty,EnumProperty,ArrayProperty"
+      },
+      "ContentSetting": [
+        [
+          {
+            "ContentId": "ESkillContentType::SKILLCONTENT_ID",
+            "ContentValue": {
+              "Setting_ContentVal": [
+                5
+              ],
+              "IsPer": false,
+              "UTTypes": "ArrayProperty,BoolProperty"
+            },
+            "UTTypes": "EnumProperty,StructProperty"
+          }
+        ]
+      ],
+      "LifeTimeByLv": [],
+      "PercentByLv": [],
+      "SkillName": "msg_bat_linkability_name010",
+      "SkillText": "msg_bat_linkability_cap010",
+      "UseActivatedEffect": false,
+      "PassiveContentType": "ESkillPassiveType::SKILLPASSIVE_TYPE_NONE",
+      "PassiveContentVal": 0
+    }
+  }
+]
