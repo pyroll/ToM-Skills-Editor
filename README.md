@@ -1,12 +1,12 @@
-ToM Skills Editor Version 0.1
+#ToM Skills Editor Version 0.1
 
-BASIC USAGE:
+##BASIC USAGE:
 Selecting a skill under a character's tab will display the data on the right side of the
 app:
 
-![Update data on selection of skill](github.com/pyroll/ToM-Skills-Editor/img/img_for_readme/data_on_selection.png)
+![Update data on selection of skill](https://github.com/pyroll/ToM-Skills-Editor/img/img_for_readme/data_on_selection.png)
 
-Oddities/Notes:
+###Oddities/Notes:
 - Setting a stat boost such as 'Luck +10' to a link ability will have a strange
     visual effect and doesn't seem to actually apply to status boost to each character.
     So avoid doing this if possible.
@@ -15,14 +15,14 @@ Oddities/Notes:
     to provide a unique id that I need in the game files for some skills, so they
     need to be left as is.
 
-Changelog from previous version:
+###Changelog from previous version:
 - 
 
-Future Plans:
+###Future Plans:
 - Add ability to change what stat a skill is assigned to
 - Add editing for magic/arts
 
-*** Final Note - A Request ***
+####*** Final Note - A Request ***
 If anyone wants to volunteer to help make the skills more readable, I could use a list of
 all the skill names that are shown in game. I used the skill names from the game's files, but
 it still isn't clear exactly which skill it's referring to (the Mania difficulty mod has
