@@ -3,6 +3,8 @@ _old
 _pside2_tuts
 .vscode
 build/**/
+build/**
+config/**
 Game_Files/SkillDataEdit/
 ToM_Skills_Edit_P
 venv
