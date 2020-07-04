@@ -46,7 +46,6 @@ for file in filesToCopy:
                     ('build\\dist'))
 
 # Dirs require a different method for copying
-# TODO Do we need to include the venv folder?
 sourceDirs = ['config', 'core', 'Game_Files', 'gui',
               'img', 'yaml_files']
 
@@ -58,6 +57,17 @@ for dir in sourceDirs:
     #   copy the folder itself
     shutil.copytree(src=dir, dst=('build\\dist\\' + dir),
                     dirs_exist_ok=True)
+
+# TODO We want config folder to be empty in the release, so delete
+#  all contents after copying
+for file in os.listdir('build\\dist\\config\\'):
+    basePath = 'build\\dist\\config\\'
+    filePath = basePath + file
+    os.remove(filePath)
+
+# Delete __pycache folders
+guiPycachePath = "build\\dist\\gui\\__pycache__"
+shutil.rmtree(guiPycachePath)
 
 # Create a zip file of the dist folder
 # For some reason the terminal in VS Code hangs if I try to create the
