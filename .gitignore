@@ -14,3 +14,7 @@ old code.txt
 references.txt
 ToM_Skills_Editor.spec
 README.txt
+
+# pycache folders
+core/__pycache__
+gui/__pycache__
