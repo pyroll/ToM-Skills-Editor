@@ -30,18 +30,26 @@ If you would like to save your edits for use at a later time, select **Save Conf
 as a shortcut. This will bring up a dialog for you to name it and save in the Config folder. Do not save these files anywhere else as the program
 won't be able to locate them.
 
+The **Finish** button in the lower left performs **Create Edited Files Without Saving**, which is explained below.
+
 Loading a config file reads the data from it and inserts the edits into the edits tree. You should see the current config file label update in the
 lower right as well. Select **Load Config File -> Load Into Edits Tree** to do so. You may use 'ctrl+l' as a shortcut.
 
 ## Other Menu options
-* New Config File - Clears edits tree as if you had just started up the program
-* Save Config File -> Save As.. - Save current edits to a new file (won't overwrite the currently loaded config file)
-* Save Config File -> Save and Create Edited Files - Save current edits to a config file and immediately created edited files after
-* Load Config File -> Load and Create Edited Files - Select a config file to load edits from and immediately created edited files after
-* Create Edited Files Without Saving - Creates final edited files without saving the current edits in the edits tree
+* **Create Edited Files Without Saving** - Creates final edited files without saving the current edits in the edits tree
+* **New Config File** - Clears edits tree as if you had just started up the program
+* **Save Config File -> Save As..** - Save current edits to a new file (won't overwrite the currently loaded config file)
+* **Save Config File -> Save and Create Edited Files** - Save current edits to a config file and immediately created edited files after
+* **Load Config File -> Load and Create Edited Files** - Select a config file to load edits from and immediately created edited files after
 
 ### Creating a pak file for the game
+Once you've selected to create edited files, the program will show you a notice popup saying that a folder called **ToM_Skills_Edit_P** was created in the mod's main directory. This folder needs to be converted to a pak file to be used as a mod.
 
+Download UnrealPak from this link: https://mega.nz/file/VVlwwCLL#TDBl3WBB2uEHKFhiXpLdynRZ6irUiLW82HmltmoTW8M
+
+Ensure that both 'UnrealPak.exe' AND 'UnrealPak-without-compression.bat' are in the same directory. Drag and drop the created **ToM_Skills_Edit_P** folder over 'UnrealPak-without-compression.bat'. This should yield **ToM_Skills_Edit_P.pak** in the same location. Ensure that the file size is not 0 kb, as that would indicate an error.
+
+Create a folder named something like '~mod' in Trials of Mana's steam directory if you haven't already. Place **ToM_Skills_Edit_P.pak** in that folder and you should be good to go.
 
 ### Oddities/Notes:
 - Setting a stat boost such as 'Luck +10' to a link ability will have a strange
@@ -58,6 +66,7 @@ lower right as well. Select **Load Config File -> Load Into Edits Tree** to do s
 ### Future Plans:
 - Add ability to change what stat a skill is assigned to
 - Add editing for magic/arts
+- Add ability to assign mp cost of magic
 
 ### *** Final Note - A Request ***
 If anyone wants to volunteer to help make the skills more readable, I could use a list of
