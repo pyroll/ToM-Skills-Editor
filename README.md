@@ -1,4 +1,4 @@
-# ToM Skills Editor Version 0.1
+# ToM Skills Editor
 
 ## Usage:
 Selecting a skill under a character's tab will display the data on the right side of the
@@ -52,13 +52,9 @@ Ensure that both 'UnrealPak.exe' AND 'UnrealPak-Without-Compression.bat' are in 
 Create a folder named something like '~mod' in Trials of Mana's steam directory if you haven't already. Place **ToM_Skills_Edit_P.pak** in that folder and you should be good to go.
 
 ### Oddities/Notes:
-- Setting a stat boost such as 'Luck +10' to a link ability will have a strange
-    visual effect and doesn't seem to actually apply to status boost to each character.
-    So avoid doing this if possible.
-- Some skills are unable to be converted to a link ability (the ability to change
-    the link status is disabled in the skills editor). The game wasn't nice enough
-    to provide a unique id that I need in the game files for some skills, so they
-    need to be left as is.
+- I need to tweak things before I can have each class for each character nicely displayed in the app (instead of just saying Class 1A...etc.). In the meantime if you're unsure of exactly what class to change, I recommend just changing the stat value for each 'level' class you want. For example: If you want to unlock a skill early for Hawkeye's Rogue class, just change the stat value for every 'Class 3' (Class 3A, 3B, etc.).
+- Setting a stat boost such as 'Luck +10' to a link ability will have a strange visual effect and doesn't seem to actually apply to status boost to each character. So avoid doing this if possible.
+- Some skills are unable to be converted to a link ability (the ability to change the link status is disabled in the skills editor). The game wasn't nice enough to provide a unique id that I need in the game files for some skills, so they need to be left as is.
 - In some limited testing on a maxed out ng+ save file, edited skills didn't show in the skills list. Perhaps it doesn't update if a character's stat in fully upgraded?
 
 ### Future Plans:
