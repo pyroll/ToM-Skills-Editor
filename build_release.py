@@ -8,8 +8,6 @@ with the shutil module.
 
 # TODO Can we generate the spec file inside the 'build_process'
 #  directory without breaking stuff?
-# TODO Add img icon to .exe
-# TODO See if we can hide command prompt
 import PyInstaller.__main__
 import shutil
 import os
@@ -30,10 +28,11 @@ with open('README.txt', 'w') as f:
 # Run PyInstaller from this module; creates 'build' and 'dist' dirs
 PyInstaller.__main__.run([
     '--name=%s' % 'ToM_Skills_Editor',
-    # '--scriptname=%s' % 'run_all.py',
     '--distpath=%s' % 'build\\dist',
     '--workpath=%s' % 'build\\build',
+    '--icon=%s' % 'img\\220px-Rabite_Mana.ico',
     '--onefile',
+    '--windowed',
     # '--specpath=%s' % 'build_process',
     "skills_app.py"
 ])
@@ -51,23 +50,30 @@ sourceDirs = ['config', 'core', 'Game_Files', 'gui',
 
 # Slight workaround since shutil skips copying the base dir
 for dir in sourceDirs:
-    if not os.path.exists(dir):
+    if not os.path.exists('build\\dist\\' + dir):
         os.makedirs('build\\dist\\' + dir)
-    # 'src=dir' grabs all the files INSIDE dir, but doesn't
-    #   copy the folder itself
-    shutil.copytree(src=dir, dst=('build\\dist\\' + dir),
-                    dirs_exist_ok=True)
+    else:
+        # If it exists, we need to delete and then remake it
+        #  since copytree doesn't overwrite files
+        shutil.rmtree('build\\dist\\' + dir)
 
-# TODO We want config folder to be empty in the release, so delete
+        # 'src=dir' grabs all the files INSIDE dir, but doesn't
+        #   copy the folder itself
+        shutil.copytree(src=dir, dst=('build\\dist\\' + dir))
+
+# We want config folder to be empty in the release, so delete
 #  all contents after copying
 for file in os.listdir('build\\dist\\config\\'):
     basePath = 'build\\dist\\config\\'
     filePath = basePath + file
     os.remove(filePath)
 
-# Delete __pycache folders
-guiPycachePath = "build\\dist\\gui\\__pycache__"
-shutil.rmtree(guiPycachePath)
+# # Delete __pycache folders
+# guiPycachePath = "build\\dist\\gui\\__pycache__"
+# shutil.rmtree(guiPycachePath)
+
+# corePycachePath = "build\\dist\\core\\__pycache__"
+# shutil.rmtree(corePycachePath)
 
 # Create a zip file of the dist folder
 # For some reason the terminal in VS Code hangs if I try to create the
@@ -93,3 +99,7 @@ except FileNotFoundError:
     raise Exception
 
 os.rename(zipDirPath, 'build\\dist')
+
+# Remove Edited files if they already exist in dist folder (from debugging)
+if os.path.exists(r'build\dist\ToM_Skills_Edit_P'):
+    shutil.rmtree(r'build\dist\ToM_Skills_Edit_P')
