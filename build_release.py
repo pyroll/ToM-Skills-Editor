@@ -38,7 +38,7 @@ PyInstaller.__main__.run([
 ])
 
 # Add files to the dist folder without adding them inside of the exe
-filesToCopy = ['README.txt', 'LICENSE.txt', 'README.md']
+filesToCopy = ['LICENSE.txt', 'README.md']
 
 for file in filesToCopy:
     shutil.copyfile(file, ('{0}\\' + file).format
