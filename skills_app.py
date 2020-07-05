@@ -8,10 +8,9 @@ from gui import skillsEdit
 from core import feed_info_from_json as json_info
 from ntpath import basename
 
-# LATEST COMMIT: add signal for exit & create without save action
+
 # TODO (low) Have labels more clearly show what class the tp are for
 #  ie. 'Warrior' instead of Class 1A for Duran
-# TODO Unignore all pycache folder :/
 class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
     def __init__(self):
         super(self.__class__, self).__init__()
