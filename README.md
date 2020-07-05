@@ -47,7 +47,7 @@ Once you've selected to create edited files, the program will show you a notice 
 
 Download UnrealPak from this link: https://mega.nz/file/VVlwwCLL#TDBl3WBB2uEHKFhiXpLdynRZ6irUiLW82HmltmoTW8M
 
-Ensure that both 'UnrealPak.exe' AND 'UnrealPak-without-compression.bat' are in the same directory. Drag and drop the created **ToM_Skills_Edit_P** folder over 'UnrealPak-without-compression.bat'. This should yield **ToM_Skills_Edit_P.pak** in the same location. Ensure that the file size is not 0 kb, as that would indicate an error.
+Ensure that both 'UnrealPak.exe' AND 'UnrealPak-Without-Compression.bat' are in the same directory. Drag and drop the created **ToM_Skills_Edit_P** folder over 'UnrealPak-Without-Compression.bat'. This should yield **ToM_Skills_Edit_P.pak** in the same location. Ensure that the file size is not 0 kb, as that would indicate an error.
 
 Create a folder named something like '~mod' in Trials of Mana's steam directory if you haven't already. Place **ToM_Skills_Edit_P.pak** in that folder and you should be good to go.
 
@@ -59,9 +59,6 @@ Create a folder named something like '~mod' in Trials of Mana's steam directory 
     the link status is disabled in the skills editor). The game wasn't nice enough
     to provide a unique id that I need in the game files for some skills, so they
     need to be left as is.
-
-### Changelog from previous version:
-- 
 
 ### Future Plans:
 - Add ability to change what stat a skill is assigned to
