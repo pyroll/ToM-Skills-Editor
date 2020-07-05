@@ -269,7 +269,7 @@ def editLinkStatus(charJsonData, newLinkStatus, editedSkill):
                                          ["SkillType_38_96B762CC4B4494FD"
                                           "45D6499321F74982"])
                 # Change LinkSkillLevel to 1 if new link is true
-                if newLinkStatus == True:
+                if newLinkStatus:
                     (item["Value"]["LinkSkillLevel_54_6BE8"
                      "36AD4EB5F7276A0A77825B61205E"]) = 1
                 break
@@ -343,7 +343,7 @@ def convertEditedJsonToPak():
 
             # ~ These are args that some answers in stack exchange mentioned
             #  ~ might be needed. Noting them here just in case
-            #  stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            #  (stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
             #  stdin=subprocess.DEVNULL)
 
             # We have to wait until the subprocess is finished or else the bin
@@ -467,18 +467,3 @@ dictForListingSkills = {}
 # Function calls
 CreateGrowthTableDicts()
 CreateGrowthTableLists()
-
-# For debugging
-# binfilePath = r"Game_Files\SkillGrowthTable\edited\pc01_SkillGrowthTable.bin"
-# outputPath = r"ToM_Skills_Edit_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\Skill\\"
-# fixBinFiles(binfilePath, 'pc01_SkillGrowthTable.bin',
-            # {6761: 6765}, outputPath)
-
-# Perform only if run directly
-# if __name__ == '__main__':
-    # Example for getting the Keys to display in the simple gui list
-    # duranTable = growthTableDict['pc01_GrowthTable']
-
-    # for entry in duranTable:
-    #     print(entry['Key'])
-    # print('temp')
