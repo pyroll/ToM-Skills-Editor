@@ -59,11 +59,13 @@ Create a folder named something like '~mod' in Trials of Mana's steam directory 
     the link status is disabled in the skills editor). The game wasn't nice enough
     to provide a unique id that I need in the game files for some skills, so they
     need to be left as is.
+- In some limited testing on a maxed out ng+ save file, edited skills didn't show in the skills list. Perhaps it doesn't update if a character's stat in fully upgraded?
 
 ### Future Plans:
 - Add ability to change what stat a skill is assigned to
 - Add editing for magic/arts
 - Add ability to assign mp cost of magic
+- Various usability improvements for the app
 
 ### *** Final Note - A Request ***
 If anyone wants to volunteer to help make the skills more readable, I could use a list of
