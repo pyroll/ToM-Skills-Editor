@@ -38,7 +38,7 @@ PyInstaller.__main__.run([
 ])
 
 # Add files to the dist folder without adding them inside of the exe
-filesToCopy = ['README.txt']
+filesToCopy = ['README.txt', 'LICENSE.txt', 'README.md']
 
 for file in filesToCopy:
     shutil.copyfile(file, ('{0}\\' + file).format
@@ -68,16 +68,24 @@ for file in os.listdir('build\\dist\\config\\'):
     filePath = basePath + file
     os.remove(filePath)
 
-# # Delete __pycache folders
-# guiPycachePath = "build\\dist\\gui\\__pycache__"
-# shutil.rmtree(guiPycachePath)
+# Delete __pycache folders
+guiPycachePath = "build\\dist\\gui\\__pycache__"
+shutil.rmtree(guiPycachePath)
 
-# corePycachePath = "build\\dist\\core\\__pycache__"
-# shutil.rmtree(corePycachePath)
+corePycachePath = "build\\dist\\core\\__pycache__"
+shutil.rmtree(corePycachePath)
+
+# Remove Edited files if they already exist in dist folder (from debugging)
+if os.path.exists(r'build\dist\ToM_Skills_Edit_P'):
+    shutil.rmtree(r'build\dist\ToM_Skills_Edit_P')
+
+# Remove zip archive if it already exists in dist folder
+if os.path.exists(r'build\dist\ToM_Skills_Editor0.1.zip'):
+    shutil.rmtree(r'build\dist\ToM_Skills_Editor0.1.zip')
 
 # Create a zip file of the dist folder
-# For some reason the terminal in VS Code hangs if I try to create the
-#  the zip file in 'build\\dist' ??
+# ~ For some reason the terminal in VS Code hangs if I try to create the
+#  ~ the zip file in 'build\\dist' ??
 
 # Where to place the completed zip file
 zipPath = 'build\\ToM_Skills_Editor' + modVersion
@@ -99,7 +107,3 @@ except FileNotFoundError:
     raise Exception
 
 os.rename(zipDirPath, 'build\\dist')
-
-# Remove Edited files if they already exist in dist folder (from debugging)
-if os.path.exists(r'build\dist\ToM_Skills_Edit_P'):
-    shutil.rmtree(r'build\dist\ToM_Skills_Edit_P')
