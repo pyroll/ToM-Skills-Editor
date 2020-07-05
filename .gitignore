@@ -15,6 +15,10 @@ references.txt
 ToM_Skills_Editor.spec
 README.txt
 
+# ignore all files in this dir except .uasset files
+Game_Files/SkillGrowthTable/edited/*.bin
+Game_Files/SkillGrowthTable/edited/*.json
+
 # pycache folders
 core/__pycache__
 gui/__pycache__
