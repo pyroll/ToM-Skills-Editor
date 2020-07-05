@@ -41,7 +41,7 @@
     <property name="iconSize">
      <size>
       <width>40</width>
-      <height>45</height>
+      <height>40</height>
      </size>
     </property>
     <property name="tabsClosable">
@@ -871,6 +871,102 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="EditSkillDataTab">
+     <attribute name="title">
+      <string>Edit Skill Data</string>
+     </attribute>
+     <widget class="QTabWidget" name="abilityCategories">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>281</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="STR">
+       <attribute name="title">
+        <string>STR</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="STA">
+       <attribute name="title">
+        <string>STA</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="INT">
+       <attribute name="title">
+        <string>INT</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="SPRT">
+       <attribute name="title">
+        <string>SPRT</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="LUCK">
+       <attribute name="title">
+        <string>LUCK</string>
+       </attribute>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="infoFrame">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>30</y>
+        <width>491</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>701</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>200</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>WIP</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QLabel" name="FINISHlabel">
     <property name="geometry">
@@ -966,7 +1062,19 @@
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExit">
