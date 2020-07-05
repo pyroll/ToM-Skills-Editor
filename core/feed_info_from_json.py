@@ -326,10 +326,29 @@ def convertEditedJsonToPak():
         if file[-5:] == '.json':
             editedJsonPath = basePath + file
 
+            #
             # Call bat file to output bin files
-            subprocess.check_output("core\\hold_for_editing\\UAsset2Json.exe "
-                                    "-tobin -force " + editedJsonPath)
-            # core\hold_for_editing\UAsset2Json.exe
+            #
+
+            # ~ Old method before trying to build with --windowed option
+            # subprocess.check_output("core\\hold_for_editing "
+            #                         "\\UAsset2Json.exe "
+            #                         "-tobin -force " + editedJsonPath)
+
+            # Since the app runs with no console, but we need to call a
+            #  subprocess that requires one, run subprocess with
+            #  required args here
+            p = subprocess.Popen(["core\\hold_for_editing\\UAsset2Json.exe",
+                                  "-tobin", "-force", editedJsonPath])
+
+            # ~ These are args that some answers in stack exchange mentioned
+            #  ~ might be needed. Noting them here just in case
+            #  stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            #  stdin=subprocess.DEVNULL)
+
+            # We have to wait until the subprocess is finished or else the bin
+            #  files won't be created in time
+            p.wait()
 
     #
     # Make required fixes to bin files; split and copy them to correct
