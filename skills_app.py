@@ -8,9 +8,10 @@ from gui import skillsEdit
 from core import feed_info_from_json as json_info
 from ntpath import basename
 
-
+# LATEST COMMIT: add signal for exit & create without save action
 # TODO (low) Have labels more clearly show what class the tp are for
 #  ie. 'Warrior' instead of Class 1A for Duran
+# TODO Unignore all pycache folder :/
 class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
     def __init__(self):
         super(self.__class__, self).__init__()
@@ -71,6 +72,10 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
         (self.FINISHbtn.clicked.connect
          (self.processGrowthTableEdits))
 
+        # Connect create without saving action (same as FINISH)
+        (self.actionCreate_edited_files.triggered.connect
+         (self.processGrowthTableEdits))
+
         # Connect action for making a new edit file
         # TODO Ask if user wants to save before opening new file
         (self.actionNew_Config_File.triggered.connect
@@ -100,6 +105,10 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
         # Connect Load and create edited files action
         (self.actionLoad_and_Create_Edited_Files.triggered.connect
          (self.loadAndCreateAction))
+
+        # Connect Exit action
+        (self.actionExit.triggered.connect
+         (self.exitProgram))
 
         #
         # ~~~ SIGNALS END ~~~
@@ -141,7 +150,7 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
         character = (json_info.findCurrentCharacter
                      (self.tabIndexToChar, self.currentTabIndex))
 
-        print(self.currentQList.currentItem().text())
+        # print(self.currentQList.currentItem().text())
         selectedSkill = self.currentQList.currentItem().text()
 
         # Get all the data we need to update everything
@@ -189,7 +198,7 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
         # Grab character name
         character = (json_info.findCurrentCharacter
                      (self.tabIndexToChar, self.currentTabIndex))
-        print(character)
+        # print(character)
 
         currentSkillName = self.currentQList.currentItem().text()
 
@@ -204,12 +213,12 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
         for lineEdit, value in self.tPointsDict.items():
             originalTValue = value
             originalTPointsList.append(originalTValue)
-        print(originalTPointsList)
+        # print(originalTPointsList)
         # Get the potentially updated values of training points for each class
         newTPointsList = []
         for lineEdit in self.tPointsDict.keys():
             newTPointsList.append(lineEdit.text())
-        print(newTPointsList)
+        # print(newTPointsList)
 
         # First we need to ensure that changes were made to the skill
 
@@ -228,11 +237,8 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
 
             # Check training points for each class
             for index in range(len(originalTPointsList)):
-                print("Index: ", index)
+                # print("Index: ", index)
                 if originalTPointsList[index] != newTPointsList[index]:
-                    print("originalTPointsList[index]: ",
-                          originalTPointsList[index])
-                    print("newTPointsList[index]: ", newTPointsList[index])
                     changes_made = True
 
             # Need to break here to stop the While loop
@@ -461,6 +467,11 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
         # Process and output the final edited files to ToM_Skills_Edit_P
         json_info.convertEditedJsonToPak()
 
+        NoticeWindow(self.centralwidget,
+                     ("Edited files should now be "
+                      "located in the 'ToM_Skills_Edit_P' "
+                      "folder"))
+
     def loadIntoEditsTreeAction(self):
         """Open dialogue to choose a config file. Feed filepath and tab
         index dict to loadIntoEditsTree
@@ -556,9 +567,13 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow):
         # Process and output the final edited files to ToM_Skills_Edit_P
         json_info.convertEditedJsonToPak()
 
-    def debugWarningWindow(self):
-        WarningWindow(self.centralwidget,
-                      'This is a test message.')
+        NoticeWindow(self.centralwidget,
+                     ("Edited files should now be "
+                      "located in the 'ToM_Skills_Edit_P' "
+                      "folder"))
+
+    def exitProgram(self):
+        sys.exit()
 
 
 class WarningWindow(QtWidgets.QMessageBox):
