@@ -9,13 +9,22 @@ from core import feed_info_from_json as json_info
 from ntpath import basename
 
 from _skill_growth_mixin import SkillGrowthMixin
+from _arts_acquire_mixin import ArtsAcquireMixin
 from _signals import Signals
 
 
 # TODO (low) Have labels more clearly show what class the tp are for
 #  ie. 'Warrior' instead of Class 1A for Duran
-class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow, SkillGrowthMixin,
-                 Signals):
+class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
+                 skillsEdit.Ui_MainWindow,
+                 QMainWindow):
+    """
+    Main Class; expanded upon with mixins.
+
+    Accesses Ui_MainWindow class to setup up window from our ui file.
+    QMainWindow is also required to do this.
+    """
+
     def __init__(self):
         # super(self.__class__, self).__init__()
         super().__init__()
@@ -38,81 +47,27 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow, SkillGrowthMixin,
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # Initial data loading from mixins
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        self.createSkillGrowthVars()
 
         # Add all list items
         self.addListItems()
+        self.addListItems_Arts()
+
+        self.createSkillGrowthVars()
+        self.createArtsAcquireVars()
 
         # Add all signals
         self.menuSignals()
         self.skillGrowthTabSignals()
+        self.artsAcquireTabSignals()
 
-    def removeEdit(self):
-        """Delete current selection in edits tree."""
-        # Get current selection in edit list
-        currentSelection = self.editsTree.currentItem()
-        # Get parent item so we can remove its child
-        currentSelectionParent = currentSelection.parent()
-        currentSelectionParent.removeChild(currentSelection)
-
-    def createFinalEditsDict(self):
-        """Creates finalEditsDict by grabbing info from the edits
-        tree."""
-        # Our dict that will be used for creating a yaml file
-        finalEditsDict = {}
-
-        # Get range of toplevelitems/characters
-        for i in range(self.editsTree.topLevelItemCount()):
-            charTopLevel = self.editsTree.topLevelItem(i)
-            charText = charTopLevel.text(0)
-            # Iterate through char's children/skills
-
-            # Skip if no children exist
-            if charTopLevel.childCount() == 0:
-                continue
-            else:
-                finalEditsDict[charText] = {}
-
-            for x in range(charTopLevel.childCount()):
-                charSkill = charTopLevel.child(x)
-                charSkillText = charSkill.text(0)
-                finalEditsDict[charText][charSkillText] = []
-                # iterate through skill's items
-                for y in range(charSkill.childCount()):
-                    skillEdit = charSkill.child(y)
-                    skillEditText = skillEdit.text(0)
-                    (finalEditsDict[charText]
-                        [charSkillText].append(skillEditText))
-
-        return finalEditsDict
-
-    def processGrowthTableEdits(self):
-        """
-        Send finalEditsDict to feed_info...py; it'll be used to
-        create edited json files.
-        """
-        # TODO Make this function easily usable by other functions.
-        #  There are 3-4 different actions that all do this process.
-        finalEditsDict = self.createFinalEditsDict()
-
-        # feed_info...py will work with our dict
-        json_info.createFilesFromEdits(finalEditsDict)
-
-        # Clear out/Create required directories
-        json_info.createRequiredDirs('GrowthTable')
-
-        # Process and output the final edited files to ToM_Skills_Edit_P
-        json_info.convertEditedJsonToPak()
-
-        NoticeWindow(self.centralwidget,
-                     ("Edited files should now be "
-                      "located in the 'ToM_Skills_Edit_P' "
-                      "folder"))
+        # Variable for holding path to currently loaded config file
+        self.currentLoadedConfig = 'temp'
 
     #
     # ~~~ MENU ACTIONS ~~~
     #
     def newConfigAction(self):
+        """Clear edits table(s) and resets to new config file."""
         # Clear our edits table
         for index, char in self.tabIndexToChar.items():
             currentTree = self.editsTree.topLevelItem(index)
@@ -133,6 +88,7 @@ class MainWindow(QMainWindow, skillsEdit.Ui_MainWindow, SkillGrowthMixin,
         self.CurrentConfigEditLabel.setText("New config file")
 
     def saveAction(self):
+        """Perform save dialog."""
         # Check if a config file is loaded
         if self.currentLoadedConfig == 'temp':
             # do saveAsAction
