@@ -3,9 +3,6 @@ from PySide2 import QtGui
 
 class Signals:
     def menuSignals(self):
-        # Connect Remove Selection button for removing edited skills
-        (self.removeSelectionBtn.clicked.connect(self.removeEdit))
-
         # Connect action for making a new edit file
         # TODO Ask if user wants to save before opening new file
         (self.actionNew_Config_File.triggered.connect
@@ -53,10 +50,29 @@ class Signals:
         (self.currentQList.itemSelectionChanged.connect
             (self.loadDataOnSelection))
 
-        # Update the above info for each tab change
+        # Update skill info on each tab change
         (self.SkillGrowthCharTabs.currentChanged.connect
             (self.updateCurrentTab))
 
         # Connect Save Edits button to add edit to edit list
         (self.SaveEditsBtn.clicked.connect
             (self.addToEditTree))
+
+        # Connect Remove Selection button for removing edited skills
+        (self.removeSelectionBtn.clicked.connect(self.removeEdit))
+
+    def artsAcquireTabSignals(self):
+        # Signal for skill selection change
+        (self.currentQList_Arts.itemSelectionChanged.connect
+            (self.loadDataOnSelection_Arts))
+
+        # Update skill info on each tab change
+        (self.ArtsAcquireCharTabs.currentChanged.connect
+            (self.updateCurrentTab_Arts))
+
+        # Connect Save Edits button to add edit to edit list
+        (self.SaveEditsBtn_2.clicked.connect
+            (self.addToEditTree_Arts))
+
+        # Connect Remove Selection button for removing edited skills
+        (self.removeSelectionBtn_Arts.clicked.connect(self.removeEdit_Arts))
