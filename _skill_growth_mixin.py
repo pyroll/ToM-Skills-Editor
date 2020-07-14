@@ -1,14 +1,17 @@
 from PySide2 import QtWidgets
 from core import feed_info_from_json as json_info
+# from _dialogues_windows import NoticeWindow
 
 
-class SkillGrowthMixin:
-    # Current information of the tab widget at startup
-    # This is updated by 'updateCurrentTab' on each tab change
+class SkillGrowthMixin(object):
+    # def __init__(self):
+    #     super().__init__()
+
+    #     self.testVary = 'hello'
+
     def createSkillGrowthVars(self):
-        print(
-            'test'
-        )
+        """ Current information of the tab widget at startup
+        This is updated by 'updateCurrentTab' on each tab change"""
         self.currentTabIndex = 0
         self.currentQWidget = (self.SkillGrowthCharTabs.widget
                                (self.currentTabIndex))
@@ -24,9 +27,6 @@ class SkillGrowthMixin:
             4: "Hawkeye",
             5: "Riesz"
         }
-
-        # Variable for holding path to currently loaded config file
-        self.currentLoadedConfig = 'temp'
 
     def addListItems(self):
         widgetDict = {'Duran':  self.DuranListWidget,
@@ -53,15 +53,16 @@ class SkillGrowthMixin:
         self.currentQWidget = currentQWidget
 
         self.currentQList = (self.currentQWidget.findChild
-                                (QtWidgets.QListWidget))
+                             (QtWidgets.QListWidget))
 
         (self.currentQList.itemSelectionChanged.connect
-        (self.loadDataOnSelection))
+         (self.loadDataOnSelection))
 
     def loadDataOnSelection(self):
+        print('load data func called')
         # Character name
         character = (json_info.findCurrentCharacter
-                    (self.tabIndexToChar, self.currentTabIndex))
+                     (self.tabIndexToChar, self.currentTabIndex))
 
         selectedSkill = self.currentQList.currentItem().text()
 
@@ -75,8 +76,10 @@ class SkillGrowthMixin:
         # Update Link Status
         linkStatus = str(json_info.grabLinkStatus(currentSkillName, character))
         self.IsLinkComboBox.setCurrentText(linkStatus)
+
         # Check if link status needs to be disabled for this skill
         disabled = json_info.checkIfNeedsDisabled(currentSkillName, character)
+
         if disabled:
             self.IsLinkComboBox.setEnabled(False)
         else:
@@ -88,8 +91,8 @@ class SkillGrowthMixin:
 
         tPointsDict = {
             self.TPointsLineEdit_1A: str(tPointsList[0]),
-            self.TPointsLineEdit_2B: str(tPointsList[1]),
-            self.TPointsLineEdit_2A: str(tPointsList[2]),
+            self.TPointsLineEdit_2A: str(tPointsList[1]),
+            self.TPointsLineEdit_2B: str(tPointsList[2]),
             self.TPointsLineEdit_3A: str(tPointsList[3]),
             self.TPointsLineEdit_3B: str(tPointsList[4]),
             self.TPointsLineEdit_3C: str(tPointsList[5]),
@@ -109,7 +112,7 @@ class SkillGrowthMixin:
     def addToEditTree(self):
         # Grab character name
         character = (json_info.findCurrentCharacter
-                    (self.tabIndexToChar, self.currentTabIndex))
+                     (self.tabIndexToChar, self.currentTabIndex))
         # print(character)
 
         currentSkillName = self.currentQList.currentItem().text()
@@ -125,14 +128,15 @@ class SkillGrowthMixin:
         for lineEdit, value in self.tPointsDict.items():
             originalTValue = value
             originalTPointsList.append(originalTValue)
-            # print(originalTPointsList)
-            # Get the potentially updated values of training points for each class
+            # Get the potentially updated values of training points
+            #  for each class
             newTPointsList = []
         for lineEdit in self.tPointsDict.keys():
             newTPointsList.append(lineEdit.text())
-            # print(newTPointsList)
 
-        # First we need to ensure that changes were made to the skill
+        #
+        # We need to ensure that changes were made to the skill.
+        #
 
         # MAIN LOOP FOR CHECKING FOR CHANGES #
         changes_made = False
@@ -159,8 +163,8 @@ class SkillGrowthMixin:
 
             # If no changes found, throw warning window and break loop
             self.WarningWindow(self.centralwidget,
-                            'Please ensure you have made edits before adding to '
-                            'Edits list.')
+                               'Please ensure you have made edits'
+                               'before adding to Edits list.')
             break
 
         if changes_made:
@@ -172,7 +176,7 @@ class SkillGrowthMixin:
             treeToAddTo = self.editsTree.topLevelItem(indexForAdding)
 
             # Access all children of top item to see if skill already exists
-            childList = self.grabNameOfAllTreeChildren(treeToAddTo)
+            childList = self._grabNameOfAllTreeChildren(treeToAddTo)
 
             if currentSkillName in childList:
                 root = self.editsTree.invisibleRootItem()
@@ -228,10 +232,9 @@ class SkillGrowthMixin:
                                         (newChild_Skill))
                     # Access labels for adding to edits list
                     newChild_TPoints.setText(0, classLabelList[i] + ": " +
-                                                lineEditList[i].text())
+                                             lineEditList[i].text())
 
-
-    def grabNameOfAllTreeChildren(self, topLevelItem):
+    def _grabNameOfAllTreeChildren(self, topLevelItem):
         """
         Create a list of all skills in the toplevelitem provided
 
@@ -243,3 +246,65 @@ class SkillGrowthMixin:
             childList.append(topLevelItem.child(childIndex).text(0))
 
         return childList
+
+    def removeEdit(self):
+        """Delete current selection in edits tree."""
+        # Get current selection in edit list
+        currentSelection = self.editsTree.currentItem()
+        # Get parent item so we can remove its child
+        currentSelectionParent = currentSelection.parent()
+        currentSelectionParent.removeChild(currentSelection)
+
+    def processGrowthTableEdits(self):
+        """
+        Send finalEditsDict to feed_info...py; it'll be used to
+        create edited json files.
+        """
+        # TODO Make this function easily usable by other functions.
+        #  There are 3-4 different actions that all do this process.
+        finalEditsDict = self._createFinalEditsDict()
+
+        # feed_info...py will work with our dict
+        json_info.createFilesFromEdits(finalEditsDict)
+
+        # Clear out/Create required directories
+        json_info.createRequiredDirs('GrowthTable')
+
+        # Process and output the final edited files to ToM_Skills_Edit_P
+        json_info.convertEditedJsonToPak()
+
+        self.NoticeWindow(self.centralwidget,
+                          ("Edited files should now be "
+                           "located in the 'ToM_Skills_Edit_P' "
+                           "folder"))
+
+    def _createFinalEditsDict(self):
+        """Creates finalEditsDict by grabbing info from the edits
+        tree."""
+        # Our dict that will be used for creating a yaml file
+        finalEditsDict = {}
+
+        # Get range of toplevelitems/characters
+        for i in range(self.editsTree.topLevelItemCount()):
+            charTopLevel = self.editsTree.topLevelItem(i)
+            charText = charTopLevel.text(0)
+            # Iterate through char's children/skills
+
+            # Skip if no children exist
+            if charTopLevel.childCount() == 0:
+                continue
+            else:
+                finalEditsDict[charText] = {}
+
+            for x in range(charTopLevel.childCount()):
+                charSkill = charTopLevel.child(x)
+                charSkillText = charSkill.text(0)
+                finalEditsDict[charText][charSkillText] = []
+                # iterate through skill's items
+                for y in range(charSkill.childCount()):
+                    skillEdit = charSkill.child(y)
+                    skillEditText = skillEdit.text(0)
+                    (finalEditsDict[charText]
+                        [charSkillText].append(skillEditText))
+
+        return finalEditsDict
