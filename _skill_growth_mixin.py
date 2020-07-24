@@ -255,34 +255,9 @@ class SkillGrowthMixin(object):
         currentSelectionParent = currentSelection.parent()
         currentSelectionParent.removeChild(currentSelection)
 
-    def processGrowthTableEdits(self):
-        """
-        Send finalEditsDict to feed_info...py; it'll be used to
-        create edited json files.
-        """
-        # TODO Make this function easily usable by other functions.
-        #  There are 3-4 different actions that all do this process.
-        finalEditsDict = self._createFinalEditsDict()
-
-        # feed_info...py will work with our dict
-        json_info.createFilesFromEdits(finalEditsDict)
-
-        # Clear out/Create required directories
-        json_info.createRequiredDirs('GrowthTable')
-
-        # Process and output the final edited files to ToM_Skills_Edit_P
-        json_info.convertEditedJsonToPak()
-
-        self.NoticeWindow(self.centralwidget,
-                          ("Edited files should now be "
-                           "located in the 'ToM_Skills_Edit_P' "
-                           "folder"))
-
     def _createFinalEditsDict(self):
-        """Creates finalEditsDict by grabbing info from the edits
+        """Updates self.finalEditsDict by grabbing info from the edits
         tree."""
-        # Our dict that will be used for creating a yaml file
-        finalEditsDict = {}
 
         # Get range of toplevelitems/characters
         for i in range(self.editsTree.topLevelItemCount()):
@@ -294,17 +269,19 @@ class SkillGrowthMixin(object):
             if charTopLevel.childCount() == 0:
                 continue
             else:
-                finalEditsDict[charText] = {}
+                self.finalEditsDict["GrowthTable"] = {}
+                tempDict = {}
+                tempDict[charText] = {}
 
             for x in range(charTopLevel.childCount()):
                 charSkill = charTopLevel.child(x)
                 charSkillText = charSkill.text(0)
-                finalEditsDict[charText][charSkillText] = []
+                tempDict[charText][charSkillText] = []
                 # iterate through skill's items
                 for y in range(charSkill.childCount()):
                     skillEdit = charSkill.child(y)
                     skillEditText = skillEdit.text(0)
-                    (finalEditsDict[charText]
+                    (tempDict[charText]
                         [charSkillText].append(skillEditText))
 
-        return finalEditsDict
+            self.finalEditsDict["GrowthTable"] = tempDict

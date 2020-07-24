@@ -59,20 +59,20 @@ class ArtsAcquireMixin(object):
 
     def loadDataOnSelection_Arts(self):
         # Character name
-        character = (json_info.findCurrentCharacter_Arts
+        character = (json_info._findCurrentCharacter_Arts
                      (self.tabIndexToChar_Arts, self.currentTabIndex_Arts))
 
         selectedSkill = self.currentQList_Arts.currentItem().text()
 
         # Get all the data we need to update everything
-        json_info.extractSkillData_Arts(selectedSkill, character)
+        json_info._extractSkillData_Arts(selectedSkill, character)
 
         # Update current Skill Name
         currentSkillName = self.currentQList_Arts.currentItem().text()
         self.UniqueArtLabel.setText(currentSkillName)
 
         # Update 'Stat To Acquire From'
-        statToAcquireFrom = str(json_info.grabStatToAcquireFrom
+        statToAcquireFrom = str(json_info._grabStatToAcquireFrom
                                 (currentSkillName, character))
 
         # dict for matching 'statToAcquireFrom' to combobox text
@@ -92,7 +92,7 @@ class ArtsAcquireMixin(object):
                 self.StatAcquireComboBox.setCurrentText(textValue)
 
         # Populate Training Points required fields
-        tPointsList = (json_info.grabTPointsRequired_Arts
+        tPointsList = (json_info._grabTPointsRequired_Arts
                        (currentSkillName, character))
 
         tPointsDict = {
@@ -117,13 +117,13 @@ class ArtsAcquireMixin(object):
 
     def addToEditTree_Arts(self):
         # Grab character name
-        character = (json_info.findCurrentCharacter_Arts
+        character = (json_info._findCurrentCharacter_Arts
                      (self.tabIndexToChar_Arts, self.currentTabIndex_Arts))
 
         currentSkillName = self.currentQList_Arts.currentItem().text()
 
         # Original status value
-        statusValue = str(json_info.grabStatToAcquireFrom(currentSkillName,
+        statusValue = str(json_info._grabStatToAcquireFrom(currentSkillName,
                           character))
         # Check current status value
         currentStatusValue = self.StatAcquireComboBox.currentText()
@@ -239,7 +239,7 @@ class ArtsAcquireMixin(object):
                                     (newChild_Skill))
                 # Access labels for adding to edits list
                 newChild_TPoints.setText(0, classLabelList[i] + ": " +
-                                            lineEditList[i].text())
+                                         lineEditList[i].text())
 
     def _grabNameOfAllTreeChildren_Arts(self, topLevelItem):
         """
@@ -261,3 +261,52 @@ class ArtsAcquireMixin(object):
         # Get parent item so we can remove its child
         currentSelectionParent = currentSelection.parent()
         currentSelectionParent.removeChild(currentSelection)
+
+    def processGrowthTableEdits_Arts(self):
+        """
+        Send finalEditsDict to feed_info...py; it'll be used to
+        create edited json files.
+        """
+        # TODO We can probably delete this method
+
+        # feed_info...py will work with our dict
+        json_info.createFilesFromEdits_Arts(self.finalEditsDict)
+
+        # Clear out/Create required directories
+        json_info.createRequiredDirs('ArtsAcquireTable')
+
+        # Process and output the final edited files to ToM_Skills_Edit_P
+        json_info.convertEditedJsonToPak()
+
+    def _createfinalEditsDict_Arts(self):
+        """
+        Update self.finalEditsDict.
+
+        Grab info from the edits tree.
+        """
+        # Get range of toplevelitems/characters
+        for i in range(self.ArtsEditTree.topLevelItemCount()):
+            charTopLevel = self.ArtsEditTree.topLevelItem(i)
+            charText = charTopLevel.text(0)
+            # Iterate through char's children/skills
+
+            # Skip if no children exist
+            if charTopLevel.childCount() == 0:
+                continue
+            else:
+                self.finalEditsDict["ArtsAcquireTable"] = {}
+                tempDict = {}
+                tempDict[charText] = {}
+
+            for x in range(charTopLevel.childCount()):
+                charSkill = charTopLevel.child(x)
+                charSkillText = charSkill.text(0)
+                tempDict[charText][charSkillText] = []
+                # iterate through skill's items
+                for y in range(charSkill.childCount()):
+                    skillEdit = charSkill.child(y)
+                    skillEditText = skillEdit.text(0)
+                    (tempDict[charText]
+                        [charSkillText].append(skillEditText))
+
+            self.finalEditsDict["ArtsAcquireTable"] = tempDict
