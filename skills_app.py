@@ -1,4 +1,5 @@
 import sys
+
 from PySide2 import QtGui, QtWidgets
 from PySide2.QtWidgets import QApplication, QMainWindow
 from PySide2.QtCore import QObject
@@ -15,6 +16,7 @@ from _signals import Signals
 
 # TODO (low) Have labels more clearly show what class the tp are for
 #  ie. 'Warrior' instead of Class 1A for Duran
+# TODO Serializer breaks the file is status for Duran's arts are changed
 class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
                  skillsEdit.Ui_MainWindow,
                  QMainWindow):
@@ -26,11 +28,12 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
     """
 
     def __init__(self):
+        """Set up gui from ui file; add all info from mixins."""
         # super(self.__class__, self).__init__()
         super().__init__()
 
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        # MainWindow Setup
+        # ~~~ MainWindow Setup ~~~
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         self.setupUi(self)
 
@@ -45,17 +48,18 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         self.setFixedSize(766, 612)
 
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        # Initial data loading from mixins
+        # ~~~ Initial data loading from mixins ~~~
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        # Add all list items
+        # Add list items to be displayed in gui
         self.addListItems()
         self.addListItems_Arts()
 
+        # Add instance variables
         self.createSkillGrowthVars()
         self.createArtsAcquireVars()
 
-        # Add all signals
+        # Add signals
         self.menuSignals()
         self.skillGrowthTabSignals()
         self.artsAcquireTabSignals()
@@ -63,9 +67,13 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         # Variable for holding path to currently loaded config file
         self.currentLoadedConfig = 'temp'
 
-    #
+        # Dict for holding final edits from edit trees
+        self.finalEditsDict = {}
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # ~~~ MENU ACTIONS ~~~
-    #
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # TODO finalEditsDict isn't updated when using FINISH btn
     def newConfigAction(self):
         """Clear edits table(s) and resets to new config file."""
         # Clear our edits table
@@ -97,10 +105,12 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
             currentConfigFilePath = self.currentLoadedConfig
 
             # Dump edits tree data to yaml file
-            finalEditsDict = self.createFinalEditsDict()
+            self._createFinalEditsDict()
+            self._createFinalEditsDict_Arts()
 
             # Overwrite file
-            json_info.saveConfigFile(finalEditsDict, currentConfigFilePath)
+            json_info.saveConfigFile(self.finalEditsDict,
+                                     currentConfigFilePath)
 
     def saveAsAction(self):
         mySaveAs = SaveAsDialogue('Config file Save As...', 'config',
@@ -109,10 +119,11 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         try:
             savedConfigFilepath = mySaveAs.savedConfigFilepath
 
-            # Dump edits tree data to yaml file
-            finalEditsDict = self.createFinalEditsDict()
+            # TODO Dump finalEditsDict data to yaml file; include each tab
+            self._createFinalEditsDict()
+            self._createfinalEditsDict_Arts()
 
-            json_info.saveConfigFile(finalEditsDict, savedConfigFilepath)
+            json_info.saveConfigFile(self.finalEditsDict, savedConfigFilepath)
 
             # Update variable for currently loaded config file
             self.currentLoadedConfig = savedConfigFilepath
@@ -135,9 +146,11 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
 
         # Clear out/Create required directories
         json_info.createRequiredDirs('GrowthTable')
+        json_info.createRequiredDirs('ArtsAcquireTable')
 
         # Process and output the final edited files to ToM_Skills_Edit_P
         json_info.convertEditedJsonToPak()
+        json_info.convertEditedJsonToPak_Arts(self.finalEditsDict)
 
         NoticeWindow(self.centralwidget,
                      ("Edited files should now be "
@@ -162,10 +175,27 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
             pass
 
     def loadIntoEditsTree(self, configFilePath, tabIndexDict):
-        """Load data from config file and insert into edits tree"""
+        """Load data from config file and insert into edits tree."""
         with open(configFilePath, 'r') as f:
             configData = yaml.load(f, Loader=yaml.FullLoader)
 
+        for game_file_type in configData.keys():
+            if game_file_type == 'ArtsAcquireTable':
+                self._addArtsAcquire(configData, tabIndexDict, configFilePath)
+            elif game_file_type == 'GrowthTable':
+                self._addGrowthTable(configData, tabIndexDict, configFilePath)
+
+        # Update variable for currently loaded config file
+        self.currentLoadedConfig = configFilePath
+
+        # Update Label that displays currently loaded config file
+        baseFilename = basename(configFilePath)
+        self.CurrentConfigEditLabel.setText(baseFilename)
+
+        # Update finalEditsDict
+        self.finalEditsDict = configData
+
+    def _addGrowthTable(self, configData, tabIndexDict, configFilePath):
         #
         # Clear all entries in data tree before loading new data
         #
@@ -186,7 +216,7 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         #
 
         # configData is a dict; access skills by 'configData[char]'
-        for character in configData:
+        for character in configData['GrowthTable']:
             # Grab index for inserting data under top level items
             for index, char in tabIndexDict.items():
                 if char == character:
@@ -195,7 +225,7 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
             topLevelToAddTo = self.editsTree.topLevelItem(charIndex)
 
             # Loop through the skills; each skill is a dict
-            for skill in configData[character]:
+            for skill in configData['GrowthTable'][character]:
                 skillToAdd = skill
 
                 # Add new skill name
@@ -203,17 +233,53 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
                 newSkill.setText(0, skillToAdd)
 
                 # Loop through edits in skill
-                for edit in configData[character][skill]:
+                for edit in configData['GrowthTable'][character][skill]:
                     # Add children/edits for the skill
                     newEdit = QtWidgets.QTreeWidgetItem(newSkill)
                     newEdit.setText(0, edit)
 
-        # Update variable for currently loaded config file
-        self.currentLoadedConfig = configFilePath
+    def _addArtsAcquire(self, configData, tabIndexDict, configFilePath):
+        #
+        # Clear all entries in data tree before loading new data
+        #
+        for index, char in self.tabIndexToChar_Arts.items():
+            currentTree = self.ArtsEditTree.topLevelItem(index)
 
-        # Update Label that displays currently loaded config file
-        baseFilename = basename(configFilePath)
-        self.CurrentConfigEditLabel.setText(baseFilename)
+        root = self.ArtsEditTree.invisibleRootItem()
+        child_count = root.childCount()
+        for i in range(child_count):
+            item = root.child(i)
+            subChildCount = item.childCount()
+            for i in range(subChildCount):
+                # text at first (0) column
+                currentTree.removeChild(item.child(i))
+
+        #
+        # Start with top level dicts/characters
+        #
+
+        # configData is a dict; access skills by 'configData[char]'
+        for character in configData['ArtsAcquireTable']:
+            # Grab index for inserting data under top level items
+            for index, char in tabIndexDict.items():
+                if char == character:
+                    charIndex = index
+                    break
+            topLevelToAddTo = self.ArtsEditTree.topLevelItem(charIndex)
+
+            # Loop through the skills; each skill is a dict
+            for skill in configData['ArtsAcquireTable'][character]:
+                skillToAdd = skill
+
+                # Add new skill name
+                newSkill = QtWidgets.QTreeWidgetItem(topLevelToAddTo)
+                newSkill.setText(0, skillToAdd)
+
+                # Loop through edits in skill
+                for edit in configData['ArtsAcquireTable'][character][skill]:
+                    # Add children/edits for the skill
+                    newEdit = QtWidgets.QTreeWidgetItem(newSkill)
+                    newEdit.setText(0, edit)
 
     def loadAndCreateAction(self):
         """Bypasses loading data into the edits tree. Grabs the
@@ -228,16 +294,16 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         with open(configFilePath, 'r') as f:
             configData = yaml.load(f, Loader=yaml.FullLoader)
 
-        # json_info.createFilesFromEdits(configData)
-
         # feed_info...py will work with our dict
         json_info.createFilesFromEdits(configData)
 
         # Clear out/Create required directories
         json_info.createRequiredDirs('GrowthTable')
+        json_info.createRequiredDirs('ArtsAcquireTable')
 
         # Process and output the final edited files to ToM_Skills_Edit_P
         json_info.convertEditedJsonToPak()
+        json_info.convertEditedJsonToPak_Arts(self.finalEditsDict)
 
         NoticeWindow(self.centralwidget,
                      ("Edited files should now be "
@@ -247,7 +313,35 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
     def exitProgram(self):
         sys.exit()
 
+    def processGrowthTableEdits(self):
+        """
+        Send finalEditsDict to feed_info...py; it'll be used to
+        create edited json files.
+        """
+        # TODO Make this function easily usable by other functions.
+        #  There are 3-4 different actions that all do this process.
 
+        # feed_info...py will work with our dict
+        json_info.createFilesFromEdits(self.finalEditsDict)
+        json_info.createFilesFromEdits_Arts(self.finalEditsDict)
+
+        # Clear out/Create required directories
+        json_info.createRequiredDirs('GrowthTable')
+        json_info.createRequiredDirs('ArtsAcquireTable')
+
+        # Process and output the final edited files to ToM_Skills_Edit_P
+        json_info.convertEditedJsonToPak()
+        json_info.convertEditedJsonToPak_Arts(self.finalEditsDict)
+
+        NoticeWindow(self.centralwidget,
+                     ("Edited files should now be "
+                      "located in the 'ToM_Skills_Edit_P' "
+                      "folder"))
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~ Popup Windows ~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class WarningWindow(QtWidgets.QMessageBox):
     """
     Base class for warning popup window.
