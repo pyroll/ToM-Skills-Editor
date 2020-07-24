@@ -1,2 +1,5 @@
 GrowthTable:
   - "ToM_Skills_Edit_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\Skill\\"
+
+ArtsAcquireTable:
+  - "ToM_Skills_Edit_P\\Trials of Mana\\Content\\Game00\\Data\\Csv\\CharaData\\Arts\\"
