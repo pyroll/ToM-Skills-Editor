@@ -1,3 +1,5 @@
+import logging
+
 from PySide2 import QtWidgets
 from core import feed_info_from_json as json_info
 # from _dialogues_windows import NoticeWindow
@@ -30,12 +32,12 @@ class SkillGrowthMixin(object):
 
     def addListItems(self):
         widgetDict = {'Duran':  self.DuranListWidget,
-                        'Angela': self.AngelaListWidget,
-                        'Kevin': self.KevinListWidget,
-                        'Charlotte': self.CharloListWidget,
-                        'Hawkeye': self.HawkListWidget,
-                        'Riesz': self.RieszListWidget
-                        }
+                      'Angela': self.AngelaListWidget,
+                      'Kevin': self.KevinListWidget,
+                      'Charlotte': self.CharloListWidget,
+                      'Hawkeye': self.HawkListWidget,
+                      'Riesz': self.RieszListWidget
+                      }
 
         for char, varName in widgetDict.items():
             for skill in json_info.dictForListingSkills[char]:
@@ -59,7 +61,6 @@ class SkillGrowthMixin(object):
          (self.loadDataOnSelection))
 
     def loadDataOnSelection(self):
-        print('load data func called')
         # Character name
         character = (json_info.findCurrentCharacter
                      (self.tabIndexToChar, self.currentTabIndex))
@@ -108,6 +109,9 @@ class SkillGrowthMixin(object):
 
         for LineEdit, pointsVal in tPointsDict.items():
             LineEdit.setText(pointsVal)
+
+        logger.info(f'Skill Selected: {character} -'
+                    f' {selectedSkill}')
 
     def addToEditTree(self):
         # Grab character name
@@ -285,3 +289,15 @@ class SkillGrowthMixin(object):
                         [charSkillText].append(skillEditText))
 
             self.finalEditsDict["GrowthTable"] = tempDict
+
+
+# Set up logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(levelname)s: %(name)s: '
+                              '%(message)s')
+
+fileHandler = logging.FileHandler('main.log')
+fileHandler.setFormatter(formatter)
+logger.addHandler(fileHandler)

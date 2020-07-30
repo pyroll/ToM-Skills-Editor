@@ -1,3 +1,5 @@
+import logging
+
 from PySide2 import QtWidgets
 from core import feed_info_from_json as json_info
 
@@ -52,10 +54,12 @@ class ArtsAcquireMixin(object):
         self.currentQWidget_Arts = currentQWidget
 
         self.currentQList_Arts = (self.currentQWidget_Arts.findChild
-                             (QtWidgets.QListWidget))
+                                  (QtWidgets.QListWidget))
 
         (self.currentQList_Arts.itemSelectionChanged.connect
          (self.loadDataOnSelection_Arts))
+
+        self.logger.debug(f'CurrentQList_Arts: {self.currentQList_Arts}')
 
     def loadDataOnSelection_Arts(self):
         # Character name
@@ -124,7 +128,7 @@ class ArtsAcquireMixin(object):
 
         # Original status value
         statusValue = str(json_info._grabStatToAcquireFrom(currentSkillName,
-                          character))
+                                                           character))
         # Check current status value
         currentStatusValue = self.StatAcquireComboBox.currentText()
 
@@ -262,6 +266,10 @@ class ArtsAcquireMixin(object):
         currentSelectionParent = currentSelection.parent()
         currentSelectionParent.removeChild(currentSelection)
 
+        logger.debug(f'Arts Edit Removed:\n'
+                     f'\tSelection Removed: {currentSelection.text(0)}\n'
+                     f'\tSelection Parent: {currentSelectionParent.text(0)}')
+
     def processGrowthTableEdits_Arts(self):
         """
         Send finalEditsDict to feed_info...py; it'll be used to
@@ -278,7 +286,7 @@ class ArtsAcquireMixin(object):
         # Process and output the final edited files to ToM_Skills_Edit_P
         json_info.convertEditedJsonToPak()
 
-    def _createfinalEditsDict_Arts(self):
+    def _createFinalEditsDict_Arts(self):
         """
         Update self.finalEditsDict.
 
@@ -310,3 +318,15 @@ class ArtsAcquireMixin(object):
                         [charSkillText].append(skillEditText))
 
             self.finalEditsDict["ArtsAcquireTable"] = tempDict
+
+
+# Set up logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(levelname)s: %(name)s: '
+                              '%(message)s')
+
+fileHandler = logging.FileHandler('main.log')
+fileHandler.setFormatter(formatter)
+logger.addHandler(fileHandler)
