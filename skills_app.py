@@ -1,9 +1,10 @@
 import sys
+import yaml
+import logging
 
 from PySide2 import QtGui, QtWidgets
 from PySide2.QtWidgets import QApplication, QMainWindow
 from PySide2.QtCore import QObject
-import yaml
 
 from gui import skillsEdit
 from core import feed_info_from_json as json_info
@@ -16,7 +17,6 @@ from _signals import Signals
 
 # TODO (low) Have labels more clearly show what class the tp are for
 #  ie. 'Warrior' instead of Class 1A for Duran
-# TODO Serializer breaks the file is status for Duran's arts are changed
 class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
                  skillsEdit.Ui_MainWindow,
                  QMainWindow):
@@ -35,7 +35,25 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # ~~~ MainWindow Setup ~~~
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        # Set up logging
+        self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(logging.DEBUG)
+
+        self.formatter = logging.Formatter('%(levelname)s: %(name)s: '
+                                           '%(message)s')
+
+        self.fileHandler = logging.FileHandler('main.log')
+        self.fileHandler.setFormatter(self.formatter)
+        self.logger.addHandler(self.fileHandler)
+
+        # Clear log file
+        with open('main.log', 'w'):
+            pass
+
+        # UI Setup
         self.setupUi(self)
+        self.logger.info('setupUi completed')
 
         # Set Window Title
         self.setWindowTitle("ToM Skills Editor")
@@ -104,7 +122,7 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         else:  # Grab current config file path
             currentConfigFilePath = self.currentLoadedConfig
 
-            # Dump edits tree data to yaml file
+            # Update finalEditsDict
             self._createFinalEditsDict()
             self._createFinalEditsDict_Arts()
 
@@ -121,7 +139,7 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
 
             # TODO Dump finalEditsDict data to yaml file; include each tab
             self._createFinalEditsDict()
-            self._createfinalEditsDict_Arts()
+            self._createFinalEditsDict_Arts()
 
             json_info.saveConfigFile(self.finalEditsDict, savedConfigFilepath)
 
@@ -139,10 +157,37 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         # Do saveAction
         self.saveAction()
 
-        # Get finalEdits Dict and create files
-        finalEditsDict = self.createFinalEditsDict()
+        self._processAndOutputEdits()
 
-        json_info.createFilesFromEdits(finalEditsDict)
+        NoticeWindow(self.centralwidget,
+                     ("Edited files should now be "
+                      "located in the 'ToM_Skills_Edit_P' "
+                      "folder"))
+
+    def _processAndOutputEdits(self):
+        # Update finalEditsDict
+        self._createFinalEditsDict()
+        self._createFinalEditsDict_Arts()
+
+        self.logger.debug(f'finalEditsDict after processing: '
+                          f'{self.finalEditsDict}')
+
+        # feed_info...py will work with our dict
+        self.readEdits_OutputFinalEdits()
+
+    def readEdits_OutputFinalEdits(self):
+        """
+        Read edits and output finals edited files.
+
+        Read edits from edits tree; handle required dirs; output final
+        files to ToM_Skills_Edit_P.
+        """
+        if not self.finalEditsDict:
+            self.logger.warning('EMPTY finalEditsDict BEING PROCESSED')
+
+        # feed_info...py will work with our dict
+        json_info.createFilesFromEdits(self.finalEditsDict)
+        json_info.createFilesFromEdits_Arts(self.finalEditsDict)
 
         # Clear out/Create required directories
         json_info.createRequiredDirs('GrowthTable')
@@ -151,11 +196,6 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         # Process and output the final edited files to ToM_Skills_Edit_P
         json_info.convertEditedJsonToPak()
         json_info.convertEditedJsonToPak_Arts(self.finalEditsDict)
-
-        NoticeWindow(self.centralwidget,
-                     ("Edited files should now be "
-                      "located in the 'ToM_Skills_Edit_P' "
-                      "folder"))
 
     def loadIntoEditsTreeAction(self):
         """Open dialogue to choose a config file. Feed filepath and tab
@@ -295,15 +335,7 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
             configData = yaml.load(f, Loader=yaml.FullLoader)
 
         # feed_info...py will work with our dict
-        json_info.createFilesFromEdits(configData)
-
-        # Clear out/Create required directories
-        json_info.createRequiredDirs('GrowthTable')
-        json_info.createRequiredDirs('ArtsAcquireTable')
-
-        # Process and output the final edited files to ToM_Skills_Edit_P
-        json_info.convertEditedJsonToPak()
-        json_info.convertEditedJsonToPak_Arts(self.finalEditsDict)
+        self._processAndOutputEdits(configData)
 
         NoticeWindow(self.centralwidget,
                      ("Edited files should now be "
@@ -315,23 +347,21 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
 
     def processGrowthTableEdits(self):
         """
-        Send finalEditsDict to feed_info...py; it'll be used to
-        create edited json files.
+        Send finalEditsDict to feed_info...py.
+
+        Use it to create edited json files.
         """
-        # TODO Make this function easily usable by other functions.
-        #  There are 3-4 different actions that all do this process.
+        # Update finalEditsDict
+        self._createFinalEditsDict()
+        self._createFinalEditsDict_Arts()
 
         # feed_info...py will work with our dict
-        json_info.createFilesFromEdits(self.finalEditsDict)
-        json_info.createFilesFromEdits_Arts(self.finalEditsDict)
+        self.readEdits_OutputFinalEdits()
 
-        # Clear out/Create required directories
-        json_info.createRequiredDirs('GrowthTable')
-        json_info.createRequiredDirs('ArtsAcquireTable')
-
-        # Process and output the final edited files to ToM_Skills_Edit_P
-        json_info.convertEditedJsonToPak()
-        json_info.convertEditedJsonToPak_Arts(self.finalEditsDict)
+        self.logger.info(
+            'FINISH BTN or Create without saving action triggered.')
+        self.logger.debug('finalEdits after finish w/o saving '
+                          f'action: {self.finalEditsDict}')
 
         NoticeWindow(self.centralwidget,
                      ("Edited files should now be "
@@ -350,6 +380,7 @@ class WarningWindow(QtWidgets.QMessageBox):
     parameter since this class can't access it from
     'skillsEdit.py'.
     """
+
     def __init__(self, parent, warningMessage):
         super().__init__()
 
@@ -370,6 +401,7 @@ class NoticeWindow(QtWidgets.QMessageBox):
     parameter since this class can't access it from
     'skillsEdit.py'.
     """
+
     def __init__(self, parent, noticeMessage):
         super().__init__()
 
