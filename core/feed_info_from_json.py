@@ -100,7 +100,7 @@ def grabLinkStatus(currentSkillName, character):
         if x["Key"] == currentSkillName:
             linkValue = (x["Value"]
                          ['EnableLinkSkill_61_'
-                         'F6EE9B314A4394A72F2F67B2C65310DC'])
+                          'F6EE9B314A4394A72F2F67B2C65310DC'])
             return linkValue
 
 
@@ -160,13 +160,22 @@ def findCurrentCharacter(tabIndexToChar, currentTabIndex):
 
 
 def createFilesFromEdits(finalEditsDict):
-    """Takes our finalized dict, uses it to edit json data,
-    then writes the edited data to new json files.
+    """
+    Use finalized dict to edit json data.
+
+    Write the edited data to new json files.
 
     Args:
         finalEditsDict (dict): dict created by processGrowthTableEdits which
          stores all of the user's edits.
     """
+    # Remove old edits
+    basePath = r'Game_Files\SkillGrowthTable\edited'
+
+    for file in os.listdir(basePath):
+        if file[-4:] == 'json':
+            filePath = basePath + "\\" + file
+            os.remove(filePath)
 
     # Dict for character -> orig json file
     charToJsonDict = {
@@ -184,7 +193,7 @@ def createFilesFromEdits(finalEditsDict):
                   r"\orig\_pc06_SkillGrowthTable.json")
     }
 
-    # Check if any edits were made to ArtsAcquire Files
+    # Check if any edits were made to SkillGrowthTable files
     #  End function if none were made
     if 'GrowthTable' not in finalEditsDict.keys():
         return
@@ -233,7 +242,7 @@ def createFilesFromEdits(finalEditsDict):
 
                                     # function to edit json data with new link status
                                     editLinkStatus(charJsonData, newLinkStatus,
-                                                editedSkill)
+                                                   editedSkill)
                                 #
                                 # Handle Training Points edited
                                 #
@@ -242,7 +251,7 @@ def createFilesFromEdits(finalEditsDict):
                                     editPointer = editSplit[0]
                                     newTValue = int(editSplit[1])
                                     editTrainingPoints(charJsonData, editedSkill,
-                                                    editPointer, newTValue)
+                                                       editPointer, newTValue)
                             break
         else:
             continue
@@ -277,13 +286,13 @@ def editLinkStatus(charJsonData, newLinkStatus, editedSkill):
                 # Change EnableLinkSkill value
                 (item["Value"]
                  ["EnableLinkSkill_61_F6EE9B314A4394A72"
-                 "F2F67B2C65310DC"]) = newLinkStatus
+                  "F2F67B2C65310DC"]) = newLinkStatus
                 # Set LinkSkillCategory equal to SkillCategory
                 (item["Value"]
                  ["LinkSkillCategory_52_511DBFF84D2AB8E7"
-                 "09A9BAA2793CEC12"]) = (item["Value"]
-                                         ["SkillCategory_37_A7"
-                                         "8A648640271F01C5AEA8A15D85BE79"])
+                  "09A9BAA2793CEC12"]) = (item["Value"]
+                                          ["SkillCategory_37_A7"
+                                           "8A648640271F01C5AEA8A15D85BE79"])
                 # Set LinkSkillType equal to SkillType
                 (item["Value"]
                  ["LinkSkillType_53_6F84424E49C6B812D3074"
@@ -293,7 +302,7 @@ def editLinkStatus(charJsonData, newLinkStatus, editedSkill):
                 # Change LinkSkillLevel to 1 if new link is true
                 if newLinkStatus:
                     (item["Value"]["LinkSkillLevel_54_6BE8"
-                     "36AD4EB5F7276A0A77825B61205E"]) = 1
+                                   "36AD4EB5F7276A0A77825B61205E"]) = 1
                 break
 
 
@@ -311,7 +320,7 @@ def editTrainingPoints(charJsonData, editedSkill, editPointer, newTValue):
         "Class_4B": 'Class_04b_47_F53FC4FF444F0C1C966ADFB294CCC9FA',
         "Class_4C": 'Class_04c_48_90FDC90C45B8FF298CC218AE008432D6',
         "Class_4D": 'Class_04d_49_7F471F484BF33494D5D408BE71CEE839'
-        }
+    }
 
     jsonPointer = editsToJsonPointers[editPointer]
 
@@ -333,9 +342,9 @@ def removeDirContents(basePath):
         os.remove(filePath)
 
 
+# TODO Remove old 'edited' json files before getting here
 def convertEditedJsonToPak():
-    """Convert Edited Json to bin files"""
-
+    """Convert Edited Json to bin files."""
     basePath = 'Game_Files\\SkillGrowthTable\\edited\\'
 
     # Remove old bin files first
@@ -591,6 +600,14 @@ def createFilesFromEdits_Arts(finalEditsDict):
         which stores all of the user's edits.
     """
 
+    # Remove old edits
+    basePath = r'Game_Files\ArtsAcquireTable\edited'
+
+    for file in os.listdir(basePath):
+        if file[-4:] == 'json':
+            filePath = basePath + "\\" + file
+            os.remove(filePath)
+
     # Dict for character -> orig json file
     charToJsonDict = {
         "Duran": (r"Game_Files\ArtsAcquireTable"
@@ -624,6 +641,14 @@ def createFilesFromEdits_Arts(finalEditsDict):
                 filePath = basePath + file
                 os.remove(filePath)
 
+    statBoxDict = {
+        "EStatusRiseType::STATUS_RISE_OFFENCE": "STR",
+        "EStatusRiseType::STATUS_RISE_SPIRIT": "SPR",
+        "EStatusRiseType::STATUS_RISE_DEFENCE": "STA",
+        "EStatusRiseType::STATUS_RISE_INTEL": "INT",
+        "EStatusRiseType::STATUS_RISE_LUCK": "LUCK"
+    }
+
     for game_file_type in finalEditsDict.keys():
         if game_file_type == 'ArtsAcquireTable':
             for char, edits in finalEditsDict[game_file_type].items():
@@ -646,14 +671,6 @@ def createFilesFromEdits_Arts(finalEditsDict):
                                     # Value of link status will be index 1
                                     splitStatus = edit.split(': ')
 
-                                    statBoxDict = {
-                                    "EStatusRiseType::STATUS_RISE_SPIRIT": "SPR",
-                                    "EStatusRiseType::STATUS_RISE_OFFENCE": "STR",
-                                    "EStatusRiseType::STATUS_RISE_DEFENCE": "STA",
-                                    "EStatusRiseType::STATUS_RISE_INTEL": "INT",
-                                    "EStatusRiseType::STATUS_RISE_LUCK": "LUCK"
-                                                }
-
                                     for k, v in statBoxDict.items():
                                         if v == splitStatus[1]:
                                             newStatus = k
@@ -661,7 +678,7 @@ def createFilesFromEdits_Arts(finalEditsDict):
 
                                     # function to edit json data with new status
                                     _editStatusToAcquireFrom(charJsonData, newStatus,
-                                                            editedSkill)
+                                                             editedSkill)
                                 #
                                 # Handle Training Points edited
                                 #
@@ -670,7 +687,7 @@ def createFilesFromEdits_Arts(finalEditsDict):
                                     editPointer = editSplit[0]
                                     newTValue = int(editSplit[1])
                                     _editTrainingPoints_Arts(charJsonData, editedSkill,
-                                                            editPointer, newTValue)
+                                                             editPointer, newTValue)
                             break
         else:
             continue
@@ -723,7 +740,7 @@ def _editTrainingPoints_Arts(charJsonData, editedSkill, editPointer,
         "Class_4B": 'Class_04b_48_8253184F47B82ACAE943ECACA6996E08',
         "Class_4C": 'Class_04c_49_75BC8DEF4FAA0DBA36AE679836391F0D',
         "Class_4D": 'Class_04d_50_1401B69149A59481989D109ACB3D8758'
-        }
+    }
 
     jsonPointer = editsToJsonPointers[editPointer]
 
@@ -776,22 +793,25 @@ def convertEditedJsonToPak_Arts(finalEditsDict):
             }
 
             needToUseNewEntryBat = False
-
-            for art in finalEditsDict['ArtsAcquireTable'][editingChar]:
-                for edit in (finalEditsDict['ArtsAcquireTable']
-                             [editingChar][art]):
-                    if edit.startswith('Status'):
-                        statToCheck = edit.split(':')[1]
-                        if statToCheck in dictForBatFileChoosing[editingChar]:
-                            continue
-                        else:
-                            needToUseNewEntryBat = True
-                            break
-
-            if not needToUseNewEntryBat:
-                _runForceBat(editedJsonPath, basePath)
+            if editingChar not in finalEditsDict['ArtsAcquireTable'].keys():
+                continue
             else:
-                _runNewEntryBat(editedJsonPath, basePath)
+                for art in finalEditsDict['ArtsAcquireTable'][editingChar]:
+                    for edit in (finalEditsDict['ArtsAcquireTable']
+                                 [editingChar][art]):
+                        if edit.startswith('Status'):
+                            statToCheck = edit.split(':')[1]
+                            if statToCheck in (dictForBatFileChoosing
+                                               [editingChar]):
+                                continue
+                            else:
+                                needToUseNewEntryBat = True
+                                break
+
+                if not needToUseNewEntryBat:
+                    _runForceBat(editedJsonPath, basePath)
+                else:
+                    _runNewEntryBat(editedJsonPath, basePath)
 
 
 def _runForceBat(editedJsonPath, basePath):
@@ -803,7 +823,7 @@ def _runForceBat(editedJsonPath, basePath):
     #  subprocess that requires one, run subprocess with
     #  required args here
     p = subprocess.Popen(["core\\hold_for_editing\\UAsset2Json.exe",
-                            "-tobin", "-force", editedJsonPath])
+                          "-tobin", "-force", editedJsonPath])
 
     # We have to wait until the subprocess is finished or else the bin
     #  files won't be created in time
@@ -836,7 +856,7 @@ def _runForceBat(editedJsonPath, basePath):
             secondOffset = secondOffsetDict[file]
             binFilePath = basePath + file
             _fixBinFiles_Arts(binFilePath, file,
-                            secondOffset, outputPath[0])
+                              secondOffset, outputPath[0])
 
 
 def _runNewEntryBat(editedJsonPath, basePath):
@@ -882,7 +902,7 @@ def _runNewEntryBat(editedJsonPath, basePath):
 
 
 def _fixBinFiles_Arts(binFilePath, binFile, uassetSizeSecondLocation,
-                     outputPath):
+                      outputPath):
 
     # First we'll change the values that denote the uasset file size.
     #  The two offsets the size is located at:
@@ -994,7 +1014,7 @@ def _fixBinFiles_Arts_NewEntries(binFilePath, binFile,
 
     # The two offsets the size is located at:
     uassetSizeOffset = [{24: 28}, {(correctSizeForUasset - 88):
-                        correctSizeForUasset - 84}]
+                                   correctSizeForUasset - 84}]
 
     for offset in uassetSizeOffset:
         # Convert our 'correctSize' int to a byte string
