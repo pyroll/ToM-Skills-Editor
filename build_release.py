@@ -14,7 +14,7 @@ import os
 
 # Add mod version to top of README.txt and to the name of
 #  the zip file we will soon create
-modVersion = "0.1"
+modVersion = "0.2"
 
 # Open original readme and use readlines() method
 with open('README.txt', 'r') as f:
@@ -38,7 +38,8 @@ PyInstaller.__main__.run([
 ])
 
 # Add files to the dist folder without adding them inside of the exe
-filesToCopy = ['LICENSE.txt', 'README.md']
+filesToCopy = ['LICENSE.txt', 'README.md', '_arts_acquire_mixin.py',
+               '_signals.py', '_skill_growth_mixin.py']
 
 for file in filesToCopy:
     shutil.copyfile(file, ('{0}\\' + file).format
