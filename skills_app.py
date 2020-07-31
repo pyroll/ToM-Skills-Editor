@@ -1,6 +1,7 @@
 import sys
 import yaml
 import logging
+import os
 
 from PySide2 import QtGui, QtWidgets
 from PySide2.QtWidgets import QApplication, QMainWindow
@@ -65,6 +66,10 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         # Disable resizing of window
         self.setFixedSize(766, 612)
 
+        # Create empty Config directory if it doesn't exist
+        if not os.path.exists('config'):
+            os.makedirs('config')
+
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # ~~~ Initial data loading from mixins ~~~
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,10 +96,18 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # ~~~ MENU ACTIONS ~~~
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # TODO finalEditsDict isn't updated when using FINISH btn
     def newConfigAction(self):
         """Clear edits table(s) and resets to new config file."""
-        # Clear our edits table
+        self._clearOutEditsTrees()
+
+        # Reset current config file variable
+        self.currentLoadedConfig = 'temp'
+
+        # Reset label that shows loaded config file
+        self.CurrentConfigEditLabel.setText("New config file")
+
+    def _clearOutEditsTrees(self):
+        # Clear our edits table (Skill Growth)
         for index, char in self.tabIndexToChar.items():
             currentTree = self.editsTree.topLevelItem(index)
 
@@ -107,11 +120,18 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
                     # text at first (0) column
                     currentTree.removeChild(item.child(i))
 
-        # Reset current config file variable
-        self.currentLoadedConfig = 'temp'
+        # Clear our edits table (Arts Acquire)
+        for index, char in self.tabIndexToChar_Arts.items():
+            currentTree = self.ArtsEditTree.topLevelItem(index)
 
-        # Reset label that shows loaded config file
-        self.CurrentConfigEditLabel.setText("New config file")
+            root = self.ArtsEditTree.invisibleRootItem()
+            child_count = root.childCount()
+            for i in range(child_count):
+                item = root.child(i)
+                subChildCount = item.childCount()
+                for i in range(subChildCount):
+                    # text at first (0) column
+                    currentTree.removeChild(item.child(i))
 
     def saveAction(self):
         """Perform save dialog."""
@@ -219,6 +239,13 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         with open(configFilePath, 'r') as f:
             configData = yaml.load(f, Loader=yaml.FullLoader)
 
+        # Make sure config file is correct before we clear edits
+        assert ('ArtsAcquireTable' in configData.keys() or
+                'GrowthTable' in configData.keys())
+
+        # Clear all edits from both trees
+        self._clearOutEditsTrees()
+
         for game_file_type in configData.keys():
             if game_file_type == 'ArtsAcquireTable':
                 self._addArtsAcquire(configData, tabIndexDict, configFilePath)
@@ -236,20 +263,20 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         self.finalEditsDict = configData
 
     def _addGrowthTable(self, configData, tabIndexDict, configFilePath):
-        #
-        # Clear all entries in data tree before loading new data
-        #
-        for index, char in self.tabIndexToChar.items():
-            currentTree = self.editsTree.topLevelItem(index)
+        # #
+        # # Clear all entries in data tree before loading new data
+        # #
+        # for index, char in self.tabIndexToChar.items():
+        #     currentTree = self.editsTree.topLevelItem(index)
 
-        root = self.editsTree.invisibleRootItem()
-        child_count = root.childCount()
-        for i in range(child_count):
-            item = root.child(i)
-            subChildCount = item.childCount()
-            for i in range(subChildCount):
-                # text at first (0) column
-                currentTree.removeChild(item.child(i))
+        #     root = self.editsTree.invisibleRootItem()
+        #     child_count = root.childCount()
+        #     for i in range(child_count):
+        #         item = root.child(i)
+        #         subChildCount = item.childCount()
+        #         for b in range(subChildCount):
+        #             # text at first (0) column
+        #             currentTree.removeChild(item.child(b))
 
         #
         # Start with top level dicts/characters
@@ -279,20 +306,20 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
                     newEdit.setText(0, edit)
 
     def _addArtsAcquire(self, configData, tabIndexDict, configFilePath):
-        #
-        # Clear all entries in data tree before loading new data
-        #
-        for index, char in self.tabIndexToChar_Arts.items():
-            currentTree = self.ArtsEditTree.topLevelItem(index)
+        # #
+        # # Clear all entries in data tree before loading new data
+        # #
+        # for index, char in self.tabIndexToChar_Arts.items():
+        #     currentTree = self.ArtsEditTree.topLevelItem(index)
 
-        root = self.ArtsEditTree.invisibleRootItem()
-        child_count = root.childCount()
-        for i in range(child_count):
-            item = root.child(i)
-            subChildCount = item.childCount()
-            for i in range(subChildCount):
-                # text at first (0) column
-                currentTree.removeChild(item.child(i))
+        #     root = self.ArtsEditTree.invisibleRootItem()
+        #     child_count = root.childCount()
+        #     for i in range(child_count):
+        #         item = root.child(i)
+        #         subChildCount = item.childCount()
+        #         for b in range(subChildCount):
+        #             # text at first (0) column
+        #             currentTree.removeChild(item.child(b))
 
         #
         # Start with top level dicts/characters
@@ -322,8 +349,11 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
                     newEdit.setText(0, edit)
 
     def loadAndCreateAction(self):
-        """Bypasses loading data into the edits tree. Grabs the
-        filename of the config file and sends it for editing."""
+        """
+        Bypasses loading data into the edits tree.
+
+        Grabs the filename of the config file and sends it for editing.
+        """
         # Grab path to config file
         chooseConfig = OpenDialogue('Choose Config file to load...', 'config',
                                     "Config (*.yaml)")
@@ -334,8 +364,11 @@ class MainWindow(SkillGrowthMixin, ArtsAcquireMixin, Signals,
         with open(configFilePath, 'r') as f:
             configData = yaml.load(f, Loader=yaml.FullLoader)
 
+        # Update finalEditsDict
+        self.finalEditsDict = configData
+
         # feed_info...py will work with our dict
-        self._processAndOutputEdits(configData)
+        self._processAndOutputEdits()
 
         NoticeWindow(self.centralwidget,
                      ("Edited files should now be "
