@@ -39,7 +39,8 @@ PyInstaller.__main__.run([
 
 # Add files to the dist folder without adding them inside of the exe
 filesToCopy = ['LICENSE.txt', 'README.md', '_arts_acquire_mixin.py',
-               '_signals.py', '_skill_growth_mixin.py']
+               '_signals.py', '_skill_growth_mixin.py',
+               'OPTIONAL_remove_locked_arts_P.pak']
 
 for file in filesToCopy:
     shutil.copyfile(file, ('{0}\\' + file).format

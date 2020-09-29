@@ -689,23 +689,24 @@ def createFilesFromEdits_Arts(finalEditsDict):
                                     _editTrainingPoints_Arts(charJsonData, editedSkill,
                                                              editPointer, newTValue)
                             break
+
+                # After all editing is complete for one character,
+                #  write to a new json file in the final location before
+                #  it will be paked
+
+                # Write new character data to new json file
+                newJsonFilepath = charToJsonDict[char]
+
+                # Get rid of the leading underscore
+                newJsonFilename = newJsonFilepath[34:]
+
+                # Write new json
+                charFullPath = basePath + newJsonFilename
+                with open(charFullPath, 'w') as f:
+                    json.dump(charJsonData, f, indent=2)
+
         else:
             continue
-
-        # After all editing is complete for one character,
-        #  write to a new json file in the final location before
-        #  it will be paked
-
-        # Write new character data to new json file
-        newJsonFilepath = charToJsonDict[char]
-
-        # Get rid of the leading underscore
-        newJsonFilename = newJsonFilepath[34:]
-
-        # Write new json
-        charFullPath = basePath + newJsonFilename
-        with open(charFullPath, 'w') as f:
-            json.dump(charJsonData, f, indent=2)
 
 
 def _editStatusToAcquireFrom(charJsonData, newStatus, editedSkill):

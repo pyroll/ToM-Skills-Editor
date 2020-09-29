@@ -292,6 +292,9 @@ class ArtsAcquireMixin(object):
 
         Grab info from the edits tree.
         """
+        self.finalEditsDict["ArtsAcquireTable"] = {}
+        tempDict = {}
+
         # Get range of toplevelitems/characters
         for i in range(self.ArtsEditTree.topLevelItemCount()):
             charTopLevel = self.ArtsEditTree.topLevelItem(i)
@@ -301,10 +304,8 @@ class ArtsAcquireMixin(object):
             # Skip if no children exist
             if charTopLevel.childCount() == 0:
                 continue
-            else:
-                self.finalEditsDict["ArtsAcquireTable"] = {}
-                tempDict = {}
-                tempDict[charText] = {}
+
+            tempDict[charText] = {}
 
             for x in range(charTopLevel.childCount()):
                 charSkill = charTopLevel.child(x)
@@ -317,7 +318,7 @@ class ArtsAcquireMixin(object):
                     (tempDict[charText]
                         [charSkillText].append(skillEditText))
 
-            self.finalEditsDict["ArtsAcquireTable"] = tempDict
+        self.finalEditsDict["ArtsAcquireTable"] = tempDict
 
 
 # Set up logging
